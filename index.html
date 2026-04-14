@@ -51,7 +51,7 @@
     }
     .section-sub {
       font-size: 17px; color: var(--mid-gray);
-      max-width: 620px; margin-top: 12px; line-height: 1.7;
+      max-width: 680px; margin-top: 12px; line-height: 1.7;
     }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
@@ -141,7 +141,7 @@
 
     /* ── Hero ── */
     #hero {
-      padding: 140px 0 90px;
+      padding: 152px 0 96px;
       background: var(--dark);
       position: relative; overflow: hidden;
     }
@@ -181,12 +181,12 @@
     .hero-sub {
       font-size: clamp(16px, 2vw, 19px);
       line-height: 1.75; color: rgba(255,255,255,0.68);
-      max-width: 640px; margin-bottom: 40px;
+      max-width: 680px; margin-bottom: 40px;
     }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 
     /* ── Síntomas ── */
-    #sintomas { padding: 90px 0; background: var(--off-white); }
+    #sintomas { padding: 84px 0; background: var(--off-white); }
     .sintomas-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -212,7 +212,7 @@
     .sintoma-sub { font-size: 13px; color: var(--mid-gray); margin-top: 4px; }
 
     /* ── Quiénes somos ── */
-    #quienes { padding: 90px 0; background: white; }
+    #quienes { padding: 84px 0; background: white; }
     .quienes-inner {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 72px; align-items: center;
@@ -252,7 +252,7 @@
     .quienes-copy p { font-size: 15px; color: var(--mid-gray); line-height: 1.75; margin-top: 14px; }
 
     /* ── Cómo trabajamos ── */
-    #como { padding: 90px 0; background: var(--off-white); }
+    #como { padding: 84px 0; background: var(--off-white); }
     .steps-grid {
       display: grid; grid-template-columns: repeat(5, 1fr);
       margin-top: 56px;
@@ -282,7 +282,7 @@
     }
 
     /* ── Casos ── */
-    #casos { padding: 90px 0; background: white; }
+    #casos { padding: 84px 0; background: white; }
     .casos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 52px; }
     @media (max-width: 768px) { .casos-grid { grid-template-columns: 1fr; } }
     .caso-card { border-radius: var(--radius-lg); padding: 36px; position: relative; overflow: hidden; }
@@ -312,7 +312,7 @@
     }
 
     /* ── Servicios ── */
-    #servicios { padding: 90px 0; background: var(--off-white); }
+    #servicios { padding: 84px 0; background: var(--off-white); }
     .servicios-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 18px; margin-top: 52px;
@@ -339,7 +339,7 @@
 
     /* ── Por qué Margay ── */
     #porquenosotros {
-      padding: 90px 0; background: var(--dark);
+      padding: 84px 0; background: var(--dark);
       position: relative; overflow: hidden;
     }
     #porquenosotros::before {
@@ -441,7 +441,7 @@
       <div class="hero-inner">
         <div class="hero-badge">
           <div class="hero-badge-dot"></div>
-          <span class="hero-badge-text">Orden operativo · Datos · Tecnología cuando hace falta</span>
+          <span class="hero-badge-text">Orden · Datos · Sistemas</span>
         </div>
         <h1 class="hero-headline">
           Tu empresa funciona.<br>
@@ -449,13 +449,23 @@
           no puede <span class="accent">escalar</span>?
         </h1>
         <p class="hero-sub">
-          Trabajamos cerca del negocio para entender cómo funciona de verdad: dónde se traban las decisiones, qué procesos están mal diseñados y qué parte del sistema ya no da más. A veces la solución es tecnología. A veces no. Siempre empieza por entender bien el problema.
+          Entendemos cómo funciona el negocio de verdad: dónde se traban las decisiones, qué procesos están mal diseñados y qué parte del sistema ya no da más.<br><br>A veces la solución es tecnología. A veces no.<br>Siempre empieza por entender bien el problema.
         </p>
         <div class="hero-actions">
-          <a href="#cta" class="btn btn-primary">Coordinar una charla →</a>
-          <a href="#casos" class="btn btn-outline" style="color:rgba(255,255,255,0.78);border-color:rgba(255,255,255,0.15);">Ver casos reales</a>
+          <a href="#cta" class="btn btn-primary">Hablemos →</a>
+          <a href="#casos" class="btn btn-outline" style="color:rgba(255,255,255,0.78);border-color:rgba(255,255,255,0.15);">Ver casos</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- No siempre hace falta software -->
+  <section id="importante" style="padding: 72px 0; background: white;">
+    <div class="container">
+      <span class="tag">Importante</span>
+      <h2 class="section-title">No siempre hace falta software.</h2>
+      <p class="section-sub">A veces el problema es un proceso mal diseñado. A veces es información fragmentada. A veces es falta de claridad.</p>
+      <p class="section-sub" style="margin-top:18px;">La tecnología entra cuando suma. No antes.</p>
     </div>
   </section>
 
@@ -538,10 +548,10 @@
         </div>
         <div class="quienes-copy">
           <span class="tag">Quiénes somos</span>
-          <h2 class="section-title">No operamos como proveedores.<br>Nos involucramos como partners del negocio.</h2>
-          <p class="section-sub">Nos importa entender cómo funciona la empresa de verdad: dónde se traban las decisiones, qué procesos están mal diseñados y qué parte del sistema ya no escala.</p>
+          <h2 class="section-title">No operamos como proveedores.<br>Trabajamos como partners del negocio.</h2>
+          <p class="section-sub">Nos importa entender cómo funciona la empresa de verdad: dónde se traban las decisiones, qué parte de la operación genera fricción y qué cambio le devolvería capacidad al negocio.</p>
           <p>En algunos casos eso deriva en rediseñar procesos. En otros, en ordenar datos. En otros, en integrar sistemas o construir tecnología. El punto nunca es la herramienta. El punto es que la empresa funcione mejor.</p>
-          <p>Margay combina mirada estratégica, criterio operativo y capacidad de implementación — para dejar estructuras más claras, más simples y más robustas.</p>
+          <p>Margay combina mirada estratégica, criterio operativo y capacidad de implementación para dejar estructuras más claras, más simples y más robustas.</p>
         </div>
       </div>
     </div>
@@ -551,7 +561,7 @@
   <section id="como">
     <div class="container">
       <span class="tag">Metodología</span>
-      <h2 class="section-title">Entramos al problema.<br>Salimos con más orden.</h2>
+      <h2 class="section-title">Entendemos el problema.<br>Dejamos más orden.</h2>
       <p class="section-sub">No llegamos con la solución armada. Llegamos con un proceso para entender bien el negocio y actuar donde realmente mueve la aguja.</p>
       <div class="steps-grid">
         <div class="step">
@@ -595,7 +605,7 @@
           <div class="caso-glow"></div>
           <div class="caso-industry">⛽ Cadena de estaciones de servicio · Uruguay</div>
           <h3 class="caso-headline">De datos inaccesibles y criterios inconsistentes a una visión unificada del negocio</h3>
-          <p class="caso-body">La empresa operaba con tres razones sociales, más de 60.000 productos sin criterios comunes y dependencia total de un proveedor externo para acceder a su propia información. Primero ordenamos la lógica del dato. Después construimos la capa técnica: pipeline de ingesta desde su ERP, centralización en BigQuery y tablero 360 para dirección. El resultado no fue solo un dashboard — fue una nueva capacidad de gestión.</p>
+          <p class="caso-body">La empresa operaba con tres razones sociales, más de 60.000 productos sin criterios comunes y dependencia total de un proveedor externo para acceder a su propia información. Primero ordenamos la lógica del dato. Después construimos la capa técnica: pipeline de ingesta desde su ERP, centralización en BigQuery y tablero 360 para dirección.<br><br><strong>Eso cambió cómo gestionan el negocio.</strong></p>
           <div class="caso-tags">
             <span class="caso-tag">Orden de datos</span>
             <span class="caso-tag">BigQuery</span>
@@ -606,7 +616,7 @@
         <div class="caso-card secondary">
           <div class="caso-industry">🏗️ Construcción vial · Uruguay</div>
           <h3 class="caso-headline">De dependencia de proveedores a dirección tecnológica con criterio propio</h3>
-          <p class="caso-body">La empresa tenía un ERP que ya no acompañaba bien la operación, problemas de cumplimiento normativo y poca visibilidad sobre decisiones técnicas clave. Entramos como CTO externo, auditamos proveedores, ordenamos prioridades y definimos el camino correcto. Antes de construir, hubo que recuperar control.</p>
+          <p class="caso-body">La empresa tenía un ERP que ya no acompañaba bien la operación, problemas de cumplimiento normativo y poca visibilidad sobre decisiones técnicas clave. Entramos como CTO externo, auditamos proveedores, ordenamos prioridades y definimos el camino correcto.<br><br><strong>Antes de construir, hubo que recuperar control.</strong></p>
           <div class="caso-tags">
             <span class="caso-tag">CTO Externo</span>
             <span class="caso-tag">Auditoría</span>
@@ -621,7 +631,7 @@
   <section id="servicios">
     <div class="container">
       <span class="tag">Dónde ayudamos</span>
-      <h2 class="section-title">No vendemos paquetes.<br>Entramos donde el negocio lo necesita.</h2>
+      <h2 class="section-title">Cómo podemos ayudar</h2>
       <p class="section-sub">Hay patrones que se repiten. Estas son las formas en las que solemos intervenir.</p>
       <div class="servicios-grid">
         <div class="servicio-card">
@@ -684,7 +694,7 @@
         <div class="razon-card">
           <span class="razon-icon">🤝</span>
           <div class="razon-title">Trabajamos como partner</div>
-          <div class="razon-desc">Nos involucramos de verdad. Nos importa entender el contexto, la operación y las restricciones antes de recomendar o ejecutar.</div>
+          <div class="razon-desc">Nos importa entender el contexto, la operación y las restricciones antes de recomendar o ejecutar.</div>
         </div>
         <div class="razon-card">
           <span class="razon-icon">🎯</span>
@@ -697,8 +707,8 @@
         <div>
           <div class="margay-fact-title">¿Por qué nos llamamos Margay?</div>
           <div class="margay-fact-body">
-            El margay es un felino nativo de nuestra región, conocido por ser el más ágil y acrobático de los gatos sudamericanos. Puede rebotar en objetos durante el salto y redirigir su trayectoria en el aire. Sus tobillos rotan 180°, haciéndolo el único felino capaz de bajar árboles de cabeza. No va en línea recta cuando el entorno cambia.<br><br>
-            Nosotros tampoco. Llegamos sin la solución armada, nos adaptamos a lo que el problema pide y cambiamos el rumbo cuando hace falta — sin perder el foco en el resultado.
+            El nombre también habla de nuestra raíz. Margay nació entre amigos de toda la vida y sigue reflejando cómo trabajamos: con cercanía, criterio y compromiso real.<br><br>
+            Nos representa por su agilidad, precisión y capacidad de adaptarse a entornos complejos. Eso es lo que buscamos dejar en cada empresa: más claridad para decidir y más capacidad para avanzar.
           </div>
         </div>
       </div>
@@ -710,9 +720,9 @@
     <div class="container">
       <span class="tag">Próximo paso</span>
       <h2 class="section-title">Si sentís que tu empresa funciona,<br>pero no escala con claridad — hablemos.</h2>
-      <p class="section-sub" style="text-align:center;margin-left:auto;margin-right:auto;">La primera conversación sirve para entender dónde está el nudo real. Sin propuesta genérica. Sin forzar una solución antes de tiempo.</p>
+      <p class="section-sub" style="text-align:center;margin-left:auto;margin-right:auto;">Una conversación simple para entender dónde está el nudo real. Sin propuesta genérica. Sin forzar una solución antes de tiempo.</p>
       <div class="cta-actions">
-        <a href="mailto:contacto@margaystudio.io" class="btn btn-primary" style="font-size:16px;padding:16px 36px;">Coordinar conversación →</a>
+        <a href="mailto:contacto@margaystudio.io" class="btn btn-primary" style="font-size:16px;padding:16px 36px;">Hablemos →</a>
       </div>
       <p class="cta-note">contacto@margaystudio.io · margaystudio.io</p>
     </div>
