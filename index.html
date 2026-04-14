@@ -500,6 +500,8 @@
       text-decoration: none; transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--green); }
+    .footer-link-social { display: inline-flex; align-items: center; justify-content: center; }
+    .footer-link-social svg { width: 14px; height: 14px; fill: currentColor; }
 
     @media (max-width: 600px) {
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -520,7 +522,6 @@
         <li><a href="#como">Cómo trabajamos</a></li>
         <li><a href="#casos">Casos</a></li>
         <li><a href="#servicios">Dónde ayudamos</a></li>
-        <li><a href="https://www.linkedin.com/company/margay-studio/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="#cta" class="btn-nav">Hablemos</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menú">
@@ -535,7 +536,6 @@
     <a href="#como" onclick="closeMobileMenu()">Cómo trabajamos</a>
     <a href="#casos" onclick="closeMobileMenu()">Casos</a>
     <a href="#servicios" onclick="closeMobileMenu()">Dónde ayudamos</a>
-    <a href="https://www.linkedin.com/company/margay-studio/" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">LinkedIn</a>
     <a href="#cta" class="btn-mobile" onclick="closeMobileMenu()">Hablemos →</a>
   </div>
 
@@ -884,7 +884,13 @@
           <li><a href="#sintomas">Señales</a></li>
           <li><a href="#casos">Casos</a></li>
           <li><a href="#servicios">Dónde ayudamos</a></li>
-          <li><a href="https://www.linkedin.com/company/margay-studio/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li>
+            <a href="https://www.linkedin.com/company/margay-studio/" target="_blank" rel="noopener noreferrer" class="footer-link-social" aria-label="LinkedIn de Margay Studio">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4.98 3.5a2.48 2.48 0 1 0 0 4.96 2.48 2.48 0 0 0 0-4.96zM3 9h4v12H3zm7 0h3.8v1.7h.1c.53-1 1.84-2 3.8-2 4.07 0 4.82 2.68 4.82 6.16V21h-4v-5.27c0-1.26-.02-2.88-1.75-2.88-1.75 0-2.02 1.37-2.02 2.79V21h-3.95z"/>
+              </svg>
+            </a>
+          </li>
           <li><a href="mailto:contacto@margaystudio.io">Contacto</a></li>
         </ul>
       </div>
