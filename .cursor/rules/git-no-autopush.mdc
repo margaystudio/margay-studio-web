@@ -1,0 +1,10 @@
+---
+description: No hacer commit ni push sin permiso explícito del usuario
+alwaysApply: true
+---
+
+# Git: sin commit ni push automáticos
+
+- **No ejecutar** `git commit`, `git push`, `git merge`, ni flujos equivalentes **a menos que el usuario lo pida de forma explícita** en ese mensaje o en el hilo (por ejemplo: "commitea y pushea", "hacé commit", "subí los cambios").
+- Tras cambios en el código: dejar el working tree como quedó, **resumir qué archivos tocaste** y, si aplica, sugerir el mensaje de commit **solo en texto**; el usuario decide cuándo versionar.
+- Si el usuario dijo antes "siempre pusheá" u otra instrucción global, **no la asumas** si luego pidió lo contrario: prevalece la instrucción más reciente sobre Git.
