@@ -1,0 +1,23 @@
+# Config de gitleaks para los repos Margay.
+# Extiende las reglas default y allowlistea valores PÚBLICOS conocidos para no
+# generar falsos positivos (el anon key de Supabase es público por diseño).
+title = "Margay gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Valores públicos / falsos positivos conocidos"
+# El anon key de Supabase (NEXT_PUBLIC_SUPABASE_ANON_KEY) es un JWT PÚBLICO: viaja al
+# browser, no es un secreto. Se allowlistea por su prefijo (iss: supabase).
+regexes = [
+  '''eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.eyJpc3MiOiJzdXBhYmFzZ[A-Za-z0-9_\-\.]+''',
+]
+paths = [
+  '''(^|/)\.venv/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)\.next/''',
+  '''(^|/)ops/.*/releases/.*\.txt$''',   # digests de imágenes, no secretos
+  '''(^|/)ops/.*prod.*\.config\.toml$''', # configs versionadas: solo refs a Secret Manager (no valores)
+  '''(^|/)ops/.*test.*\.config\.toml$''',
+]
