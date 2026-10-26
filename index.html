@@ -234,6 +234,45 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </section>
+<!-- PLATAFORMA DE CONOCIMIENTO -->
+<section class="sec" id="conocimiento" style="background:#F6F8F5;color:#0E1A14">
+<style>
+.knowledge-layout{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:64px;align-items:center}
+.knowledge-demo{background:#fff;border:1px solid #DDE8DF;border-radius:14px;padding:24px;box-shadow:0 18px 48px rgba(14,26,20,.055)}
+.knowledge-tag{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#4F8063}
+.knowledge-main{padding:18px;border:1px solid #B7DCC5;background:#EEF7F1;border-radius:10px;margin:16px 0}
+.knowledge-related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.knowledge-item{padding:13px;border:1px solid #E1E9E2;border-radius:9px;background:#fff;transition:border-color .2s,transform .2s}
+.knowledge-item:hover{border-color:#7CC39C;transform:translateY(-2px)}
+.knowledge-tito{margin-top:18px;border-radius:10px;background:#F0F6F1;padding:16px;font-size:13px;line-height:1.55}
+.knowledge-tito strong{color:#2F6B4A}
+@media(max-width:800px){.knowledge-layout{grid-template-columns:1fr;gap:32px}.knowledge-related{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.knowledge-related{grid-template-columns:1fr}}
+</style>
+<div class="wrap knowledge-layout" style="max-width:1200px;margin:0 auto;padding:88px 24px;box-sizing:border-box">
+<div data-reveal="" style="display:flex;flex-direction:column;align-items:flex-start;gap:20px">
+<span style="font:500 13px 'JetBrains Mono',monospace;color:#5C6B62">PLATAFORMA DE CONOCIMIENTO MARGAY</span>
+<h2 class="h2" style="margin:0;font-weight:500;font-size:clamp(36px,4vw,48px);line-height:1.06;letter-spacing:-.02em">Todo el conocimiento de tu empresa. <span style="color:#4FA377">Conectado.</span></h2>
+<p style="margin:0;max-width:490px;font-size:18px;line-height:1.5;color:#5C6B62">Manuales, contratos, documentos y procesos en un solo lugar. Relacioná la información, gestioná permisos y aprobaciones, y encontrá lo que necesitás con Tito.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<span style="padding:8px 11px;border:1px solid #D9E9DD;border-radius:6px;font-size:13px;color:#315D43">Documentos y procesos</span>
+<span style="padding:8px 11px;border:1px solid #D9E9DD;border-radius:6px;font-size:13px;color:#315D43">Permisos y trazabilidad</span>
+<span style="padding:8px 11px;border:1px solid #D9E9DD;border-radius:6px;font-size:13px;color:#315D43">Consultas con IA</span>
+</div>
+</div>
+<div class="knowledge-demo" data-reveal="" data-d="2" aria-label="Ejemplo ilustrativo de documentos y procesos relacionados">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><span class="knowledge-tag">EJEMPLO DE CONOCIMIENTO RELACIONADO</span><span style="width:9px;height:9px;border-radius:50%;background:#7CC39C"></span></div>
+<div class="knowledge-main"><div class="knowledge-tag">PROCESO</div><div style="font-size:21px;font-weight:500;margin-top:6px">Cierre de caja diario</div><div style="font-size:13px;color:#5C6B62;margin-top:5px">Documentación y referencias vinculadas ↓</div></div>
+<div class="knowledge-related">
+<div class="knowledge-item"><div class="knowledge-tag">PROCEDIMIENTO</div><div style="font-size:14px;margin-top:5px">Instructivo de cierre</div></div>
+<div class="knowledge-item"><div class="knowledge-tag">DOCUMENTO</div><div style="font-size:14px;margin-top:5px">Planilla de arqueo</div></div>
+<div class="knowledge-item"><div class="knowledge-tag">POLÍTICA</div><div style="font-size:14px;margin-top:5px">Diferencias de caja</div></div>
+<div class="knowledge-item"><div class="knowledge-tag">ROL</div><div style="font-size:14px;margin-top:5px">Encargado de sucursal</div></div>
+</div>
+<div class="knowledge-tito"><div style="font-weight:500;margin-bottom:8px">Consultale a Tito <span style="font-weight:400;color:#5C6B62">· ejemplo ilustrativo</span></div><div style="color:#5C6B62">¿Qué hago si hay una diferencia en el cierre?</div><div style="margin-top:8px"><strong>Tito:</strong> Revisá el procedimiento de diferencias de caja y seguí los pasos de registro y aprobación indicados.</div></div>
+</div>
+</div>
+</section>
 <!-- SOLUCIONES -->
 <section class="sec" id="soluciones" style="background: #FFFFFF">
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
