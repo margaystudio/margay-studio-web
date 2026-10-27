@@ -520,7 +520,7 @@ Escribinos por WhatsApp
 </div>
 <script>
 (function(){
-  var GA='G-WY39W25F30', KEY='margay-cookies', loaded=false;
+  var GTM='GTM-5XJCC9X8', KEY='margay-cookies', loaded=false;
   function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
   function put(v){try{localStorage.setItem(KEY,v)}catch(e){}}
   window.dataLayer=window.dataLayer||[];
@@ -529,8 +529,9 @@ Escribinos por WhatsApp
   function loadGA(){
     gtag('consent','update',{analytics_storage:'granted'});
     if(loaded)return; loaded=true;
-    var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(s);
-    gtag('js',new Date()); gtag('config',GA,{anonymize_ip:true});
+    // Google Tag Manager: GA4 (G-WY39W25F30) y los eventos se configuran en el contenedor
+    dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id='+GTM;document.head.appendChild(s);
   }
   function clearGA(){
     gtag('consent','update',{analytics_storage:'denied'});
