@@ -190,7 +190,7 @@ html{scroll-behavior:smooth}
 .wrap-logos .mq{transform:translateZ(0);-webkit-tap-highlight-color:transparent}
 .wrap-logos .lg img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;pointer-events:none}
 .wrap-logos .lg{display:inline-grid;align-items:center;justify-items:center;height:70px}
-.wrap-logos .lg img{grid-area:1/1;width:auto;display:block;max-width:none}
+.wrap-logos .lg img{grid-area:1/1;display:block;max-width:none;max-height:none;width:var(--w)!important;height:var(--h)!important}
 .wrap-logos .lg-g{opacity:1;transition:opacity .5s ease}
 .wrap-logos .lg-c{opacity:0;transition:opacity .5s ease}
 .wrap-logos .lg.hot .lg-g{opacity:0}
@@ -202,25 +202,25 @@ html{scroll-behavior:smooth}
  .wrap-logos .mq{mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important}
  .wrap-logos .mq-track{gap:40px!important;padding-right:40px!important;animation-duration:18s!important}
  .wrap-logos .lg{height:56px}
- .wrap-logos .lg img{height:auto!important;max-height:34px;max-width:150px}
+ .wrap-logos .lg img{width:calc(var(--w) * .7)!important;height:calc(var(--h) * .7)!important}
 }
 </style>
 <div class="wrap-logos" style="max-width: 1440px; margin: 0 auto; padding: 80px 0 64px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 36px">
 <span data-reveal="" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.015em; text-transform: uppercase; color: #5C6B62">Empresas que confían en Margay</span>
 <div class="mq" style="width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent)">
 <div class="mq-track" style="display: flex; align-items: center; width: max-content; gap: 104px; padding-right: 104px">
-<span class="lg"><img class="lg-g" alt="P&amp;P Construcciones" src="assets/logos/pyp-construcciones-gris.png" style="height: 44px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-construcciones-color.png" style="height: 44px"/></span>
-<span class="lg"><img class="lg-g" alt="RIL Uruguay" src="assets/logos/ril-gris.png" style="height: 50px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/ril-color.png" style="height: 50px"/></span>
-<span class="lg"><img class="lg-g" alt="Mi Auto by Santander" src="assets/logos/miauto-gris.png" style="height: 52px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/miauto-color.png" style="height: 52px"/></span>
-<span class="lg"><img class="lg-g" alt="P&amp;P Transportes" src="assets/logos/pyp-transportes-gris.png" style="height: 44px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-transportes-color.png" style="height: 44px"/></span>
-<span class="lg"><img class="lg-g" alt="GPU" src="assets/logos/gpu-gris.png" style="height: 44px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/gpu-color.png" style="height: 44px"/></span>
-<span class="lg"><img class="lg-g" alt="Servicial" src="assets/logos/servicial-gris.png" style="height: 34px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/servicial-color.png" style="height: 34px"/></span>
-<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/pyp-construcciones-gris.png" style="height: 44px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-construcciones-color.png" style="height: 44px"/></span>
-<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/ril-gris.png" style="height: 50px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/ril-color.png" style="height: 50px"/></span>
-<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/miauto-gris.png" style="height: 52px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/miauto-color.png" style="height: 52px"/></span>
-<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/pyp-transportes-gris.png" style="height: 44px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-transportes-color.png" style="height: 44px"/></span>
-<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/gpu-gris.png" style="height: 44px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/gpu-color.png" style="height: 44px"/></span>
-<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/servicial-gris.png" style="height: 34px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/servicial-color.png" style="height: 34px"/></span>
+<span class="lg"><img class="lg-g" alt="P&amp;P Construcciones" src="assets/logos/pyp-construcciones-gris.png" width="146" height="44" style="--h:44px;--w:146px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-construcciones-color.png" width="146" height="44" style="--h:44px;--w:146px"/></span>
+<span class="lg"><img class="lg-g" alt="RIL Uruguay" src="assets/logos/ril-gris.png" width="105" height="50" style="--h:50px;--w:105px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/ril-color.png" width="105" height="50" style="--h:50px;--w:105px"/></span>
+<span class="lg"><img class="lg-g" alt="Mi Auto by Santander" src="assets/logos/miauto-gris.png" width="118" height="52" style="--h:52px;--w:118px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/miauto-color.png" width="118" height="52" style="--h:52px;--w:118px"/></span>
+<span class="lg"><img class="lg-g" alt="P&amp;P Transportes" src="assets/logos/pyp-transportes-gris.png" width="148" height="44" style="--h:44px;--w:148px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-transportes-color.png" width="148" height="44" style="--h:44px;--w:148px"/></span>
+<span class="lg"><img class="lg-g" alt="GPU" src="assets/logos/gpu-gris.png" width="108" height="44" style="--h:44px;--w:108px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/gpu-color.png" width="108" height="44" style="--h:44px;--w:108px"/></span>
+<span class="lg"><img class="lg-g" alt="Servicial" src="assets/logos/servicial-gris.png" width="184" height="34" style="--h:34px;--w:184px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/servicial-color.png" width="184" height="34" style="--h:34px;--w:184px"/></span>
+<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/pyp-construcciones-gris.png" width="146" height="44" style="--h:44px;--w:146px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-construcciones-color.png" width="146" height="44" style="--h:44px;--w:146px"/></span>
+<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/ril-gris.png" width="105" height="50" style="--h:50px;--w:105px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/ril-color.png" width="105" height="50" style="--h:50px;--w:105px"/></span>
+<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/miauto-gris.png" width="118" height="52" style="--h:52px;--w:118px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/miauto-color.png" width="118" height="52" style="--h:52px;--w:118px"/></span>
+<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/pyp-transportes-gris.png" width="148" height="44" style="--h:44px;--w:148px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/pyp-transportes-color.png" width="148" height="44" style="--h:44px;--w:148px"/></span>
+<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/gpu-gris.png" width="108" height="44" style="--h:44px;--w:108px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/gpu-color.png" width="108" height="44" style="--h:44px;--w:108px"/></span>
+<span class="lg" aria-hidden="true"><img class="lg-g" alt="" src="assets/logos/servicial-gris.png" width="184" height="34" style="--h:34px;--w:184px"/><img class="lg-c" alt="" aria-hidden="true" src="assets/logos/servicial-color.png" width="184" height="34" style="--h:34px;--w:184px"/></span>
 </div>
 </div>
 </div>
