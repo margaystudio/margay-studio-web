@@ -19,9 +19,9 @@ a{color:#0E1A14;text-decoration:none}a:hover{color:#2F6B4A}
 .mq-track .lg:nth-child(5n+4) img{animation:lgfade 9s ease-in-out infinite 5.4s}
 .mq-track .lg:nth-child(5n+5) img{animation:lgfade 9s ease-in-out infinite 7.2s}
 @keyframes lgfade{0%,100%{filter:brightness(0) opacity(.32)}22%{filter:brightness(0) opacity(1)}44%{filter:brightness(0) opacity(.32)}}
-.mq:hover .lg img{filter:brightness(0) opacity(1)!important;animation-play-state:paused}
+.mq:hover .lg img{animation-play-state:running}
 @media (prefers-reduced-motion: reduce){.lg img{animation:none!important;filter:brightness(0) opacity(.6)}}
-.mq:hover .mq-track{animation-play-state:paused}
+.mq:hover .mq-track{animation-play-state:running}
 @media (prefers-reduced-motion: reduce){.mq-track{animation:none}}
 html{scroll-behavior:smooth}
 /* preloader */
@@ -185,6 +185,8 @@ html{scroll-behavior:smooth}
 .wrap-logos .mq-track .lg img[src*="logo_servicial"]{filter:grayscale(1) brightness(.72)!important;opacity:1}
 .wrap-logos .mq-track .lg:hover img[src*="logo_servicial"],.wrap-logos .mq-track .lg:focus-within img[src*="logo_servicial"]{filter:none!important;opacity:1}
 @media(hover:none){.wrap-logos .mq-track .lg img{filter:grayscale(1) brightness(.65)!important}.wrap-logos .mq-track .lg img[src*="IMG_7797"],.wrap-logos .mq-track .lg img[src*="IMG_7798"]{filter:grayscale(1) contrast(4) brightness(1.5)!important}}
+/* Slightly darker Servicial lettering while preserving the green brand mark on hover. */
+.wrap-logos .mq-track .lg:hover img[src*="logo_servicial"],.wrap-logos .mq-track .lg:focus-within img[src*="logo_servicial"]{filter:brightness(.78) contrast(1.08)!important}
 @media(prefers-reduced-motion:reduce){.wrap-logos .lg img{transition:none}}
 </style>
 <div class="wrap-logos" style="max-width: 1440px; margin: 0 auto; padding: 80px 0 64px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 36px">
