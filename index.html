@@ -521,8 +521,13 @@ function fit(){var set=t.scrollWidth/2;if(set>=mq.clientWidth+200||t.children.le
  base.forEach(function(n){var c=n.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelectorAll('img').forEach(function(i){i.alt='';});t.appendChild(c);});
  t.style.animationDuration=(dur*k)+'s'; /* misma velocidad aunque haya más logos */
  fit();}
-if(document.readyState==='complete')fit();else window.addEventListener('load',fit);
-window.addEventListener('resize',fit);})();
+/* Safari calcula el recorrido (-50%) al arrancar la animación: se reinicia con las medidas finales */
+function restart(){t.style.animationName='none';void t.offsetWidth;t.style.animationName='';}
+function ready(){fit();restart();}
+if(document.readyState==='complete')ready();else window.addEventListener('load',ready);
+var rt=0,lw=window.innerWidth;window.addEventListener('resize',function(){if(window.innerWidth===lw)return;lw=window.innerWidth;clearTimeout(rt);rt=setTimeout(ready,200);});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(restart);
+})();
 </script>
 <script>
 (function(){var mq=document.querySelector('.wrap-logos .mq');if(!mq)return;
