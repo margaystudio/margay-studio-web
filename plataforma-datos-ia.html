@@ -321,23 +321,6 @@ html{scroll-behavior:smooth}
 .ia-hero.ia-static .ia-bars i{transform:none!important}
 @media(max-width:520px){.ia-hero.ia-static .ia-tiles{grid-template-columns:1fr}.ia-hero.ia-static .ia-slot-a{grid-column:auto}.ia-hero.ia-static .ia-bubble{max-width:100%}}
 
-/* ---------- 2. PREGUNTAS ---------- */
-.ia-q{background:#fff}
-.ia-qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
-.ia-qc{position:relative;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:14px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .5s cubic-bezier(.19,1,.22,1),border-color .4s,box-shadow .5s,background .4s;overflow:hidden;min-height:168px;box-sizing:border-box;text-align:left;font:inherit;color:inherit;appearance:none;-webkit-appearance:none;width:100%}
-.ia-qc:hover,.ia-qc:focus-visible,.ia-qc.open{transform:translateY(-5px);border-color:rgba(14,26,20,.22);box-shadow:0 24px 48px -24px rgba(14,26,20,.25);background:#fff}
-.ia-qc:focus-visible{outline:2px solid #4FA377;outline-offset:2px}
-.ia-qc .ia-mono{color:#568267}
-.ia-qc h3{margin:0;font-size:18px;font-weight:500;line-height:1.3;letter-spacing:-.01em}
-.ia-qa{margin-top:auto;display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.19,1,.22,1)}
-.ia-qa > div{overflow:hidden}
-.ia-qc:hover .ia-qa,.ia-qc:focus-visible .ia-qa,.ia-qc.open .ia-qa{grid-template-rows:1fr}
-.ia-qa p{margin:0;padding-top:12px;border-top:1px solid #DFEAE1;font-size:13.5px;line-height:1.5;color:#3D4A43}
-.ia-qa p b{color:#2F6B4A;font-weight:500;font-size:11px;display:block;margin-bottom:4px;font-family:'JetBrains Mono',monospace;letter-spacing:.04em}
-.ia-qc .ia-arr{position:absolute;right:18px;top:18px;width:28px;height:28px;border-radius:50%;border:1px solid #DFEAE1;display:flex;align-items:center;justify-content:center;color:#2F6B4A;transition:background .3s,transform .5s cubic-bezier(.19,1,.22,1)}
-.ia-qc .ia-arr svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ia-qc:hover .ia-arr,.ia-qc.open .ia-arr{background:#7CC39C;border-color:#7CC39C;color:#0E1A14;transform:rotate(45deg)}
-
 /* ---------- 3. PILARES ---------- */
 .ia-p{background:#F6F8F5}
 .ia-pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:44px;align-items:end}
@@ -384,10 +367,10 @@ html{scroll-behavior:smooth}
 .ia-cta:hover .ia-door.in .ia-leaf{transform:rotateY(80deg)}
 
 /* ---------- responsive ---------- */
-@media(max-width:1024px){.ia-qgrid,.ia-pgrid{grid-template-columns:1fr 1fr}.ia-pc{min-height:380px}.ia-pc.on{min-height:440px}}
+@media(max-width:1024px){.ia-pgrid{grid-template-columns:1fr 1fr}.ia-pc{min-height:380px}.ia-pc.on{min-height:440px}}
 @media(max-width:900px){.ia-dl{grid-template-columns:1fr;gap:28px}.ia-cta .ia-wrap{grid-template-columns:1fr;padding:72px 24px;text-align:center}.ia-cta .cta-row{justify-content:center}.ia-cta .ia-sub{margin:0 auto}}
-@media(max-width:760px){.ia-wrap{padding:56px 16px}.ia-qc{min-height:0}.ia-qgrid,.ia-pgrid{grid-template-columns:1fr;margin-top:28px}.ia-pc{min-height:0!important;transform:none!important}.ia-pc p{grid-template-rows:1fr;opacity:1}.ia-pc .ia-ill{min-height:120px}.ia-dl{padding:56px 16px}.ia-door-scene{transform:scale(.8);transform-origin:top center;height:250px}}
-@media(prefers-reduced-motion:reduce){.ia-card,.ia-pc,.ia-qc,.ia-leaf,.ia-ring .val,.ia-bars i{transition:none!important}.ia-hint i,.ia-room i,.ia-ask-in .cur,.ia-pc .ia-ill .fly,.ia-pc .ia-ill .fly2{animation:none!important}}
+@media(max-width:760px){.ia-wrap{padding:56px 16px}.ia-pgrid{grid-template-columns:1fr;margin-top:28px}.ia-pc{min-height:0!important;transform:none!important}.ia-pc p{grid-template-rows:1fr;opacity:1}.ia-pc .ia-ill{min-height:120px}.ia-dl{padding:56px 16px}.ia-door-scene{transform:scale(.8);transform-origin:top center;height:250px}}
+@media(prefers-reduced-motion:reduce){.ia-card,.ia-pc,.ia-leaf,.ia-ring .val,.ia-bars i{transition:none!important}.ia-hint i,.ia-room i,.ia-ask-in .cur,.ia-pc .ia-ill .fly,.ia-pc .ia-ill .fly2{animation:none!important}}
 </style>
 
 <!-- 1 · HERO + ENSAMBLE -->
@@ -504,22 +487,6 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
-<!-- 2 · PREGUNTAS -->
-<section class="sec ia-q">
-<div class="ia-wrap">
-<span class="ia-mono" style="color:#568267">Las preguntas de todas las semanas</span>
-<h2 class="ia-h2" style="margin-top:12px">Hoy las contestás juntando planillas.</h2>
-<p class="ia-sub" style="margin-top:14px">Acá las hacés como se las harías a tu gerente. Pasá el mouse (o tocá) cada una para ver cómo responde.</p>
-<div class="ia-qgrid" data-reveal="">
-<button type="button" class="ia-qc"><span class="ia-mono">Dueño</span><h3>¿Cuánto vendimos hoy comparado con el mismo día del mes pasado?</h3><span class="ia-arr"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span><div class="ia-qa"><div><p><b>Respuesta</b>Hoy $ 418 mil, 6% arriba. El empuje vino de Sucursal Centro; Norte sigue por debajo.</p></div></div></button>
-<button type="button" class="ia-qc"><span class="ia-mono">Operaciones</span><h3>¿Qué sucursal tiene más devoluciones y por qué?</h3><span class="ia-arr"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span><div class="ia-qa"><div><p><b>Respuesta</b>Sur concentra el 41%. Tres de cada cuatro devoluciones son de productos del mismo proveedor.</p></div></div></button>
-<button type="button" class="ia-qc"><span class="ia-mono">Finanzas</span><h3>¿Cómo viene el margen por categoría este trimestre?</h3><span class="ia-arr"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span><div class="ia-qa"><div><p><b>Respuesta</b>Margen total 28%. Bebidas perdió 4 puntos por el aumento de costo de agosto que no se trasladó a precio.</p></div></div></button>
-<button type="button" class="ia-qc"><span class="ia-mono">Ventas</span><h3>¿Qué clientes compraban todos los meses y dejaron de comprar?</h3><span class="ia-arr"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span><div class="ia-qa"><div><p><b>Respuesta</b>12 clientes sin compras en 60 días. Entre ellos, 3 están entre los 20 más grandes del año.</p></div></div></button>
-<button type="button" class="ia-qc"><span class="ia-mono">Compras</span><h3>¿Qué productos se van a quedar sin stock antes del fin de semana?</h3><span class="ia-arr"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span><div class="ia-qa"><div><p><b>Respuesta</b>9 productos. Dos ya están pedidos; los otros siete no, y tres son de los más vendidos.</p></div></div></button>
-<button type="button" class="ia-qc"><span class="ia-mono">Gerencia</span><h3>Armame el resumen de la semana para la reunión del lunes.</h3><span class="ia-arr"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span><div class="ia-qa"><div><p><b>Respuesta</b>Listo: ventas, desvíos por sucursal y tres puntos para discutir. Lo podés mandar por mail o guardar como reporte.</p></div></div></button>
-</div>
-</div>
-</section>
 
 <!-- 3 · PILARES -->
 <section class="sec ia-p">
@@ -700,8 +667,6 @@ Escribinos por WhatsApp
   if(document.readyState==='complete') mode(); else window.addEventListener('load',mode);
   setTimeout(mode,0); setTimeout(mode,1500);
 
-  // preguntas: tap en mobile
-  document.querySelectorAll('.ia-qc').forEach(function(b){ b.addEventListener('click',function(){ var on=b.classList.contains('open'); document.querySelectorAll('.ia-qc.open').forEach(function(x){x.classList.remove('open')}); if(!on) b.classList.add('open'); }); });
   // pilares: el que tocás queda activo
   var pil=document.getElementById('ia-pilares'); if(pil){ pil.querySelectorAll('.ia-pc').forEach(function(c){ var on=function(){ pil.querySelectorAll('.ia-pc').forEach(function(x){x.classList.remove('on')}); c.classList.add('on'); }; c.addEventListener('mouseenter',on); c.addEventListener('focus',on); c.addEventListener('click',on); }); }
 })();
