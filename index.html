@@ -175,9 +175,11 @@ html{scroll-behavior:smooth}
 <!-- LOGO STRIP -->
 <section aria-label="Empresas que confían en nosotros" class="sec" style="background: transparent">
 <style>
-.wrap-logos .mq-track .lg img{animation:none!important;filter:grayscale(1)!important;opacity:.58;transition:filter .28s ease,opacity .28s ease,transform .28s ease;max-width:220px;max-height:58px;object-fit:contain}
+.wrap-logos .mq-track .lg img{animation:none!important;filter:grayscale(1) brightness(.55)!important;opacity:1;transition:filter .28s ease,opacity .28s ease,transform .28s ease;max-width:220px;max-height:58px;object-fit:contain}
 .wrap-logos .mq-track .lg:hover img,.wrap-logos .mq-track .lg:focus-within img{filter:grayscale(0)!important;opacity:1;transform:scale(1.045)}
-@media(hover:none){.wrap-logos .mq-track .lg img{filter:none!important;opacity:1}}
+.wrap-logos .mq-track .lg img[src*="logo_servicial"]{filter:brightness(0)!important;opacity:.64}
+.wrap-logos .mq-track .lg:hover img[src*="logo_servicial"]{filter:brightness(0) saturate(100%) invert(41%) sepia(25%) saturate(1132%) hue-rotate(90deg) brightness(87%) contrast(92%)!important;opacity:1}
+@media(hover:none){.wrap-logos .mq-track .lg img{filter:grayscale(1) brightness(.55)!important;opacity:1}.wrap-logos .mq-track .lg img[src*="logo_servicial"]{filter:brightness(0)!important;opacity:.64}}
 @media(prefers-reduced-motion:reduce){.wrap-logos .lg img{transition:none}}
 </style>
 <div class="wrap-logos" style="max-width: 1440px; margin: 0 auto; padding: 80px 0 64px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 36px">
