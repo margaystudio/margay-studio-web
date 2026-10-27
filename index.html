@@ -489,6 +489,19 @@ Escribinos por WhatsApp
   });
 })();</script>
 <script>
+/* Loop sin huecos: si una vuelta de logos es más angosta que el área visible, se duplican los logos */
+(function(){var mq=document.querySelector('.wrap-logos .mq'),t=mq&&mq.querySelector('.mq-track');if(!t)return;
+var base=[].slice.call(t.children,0,t.children.length/2),dur=parseFloat(getComputedStyle(t).animationDuration)||28;
+function fit(){var set=t.scrollWidth/2;if(set>=mq.clientWidth+200||t.children.length>base.length*8)return;
+ var k=(t.children.length+2*base.length)/(2*base.length);
+ base.forEach(function(n){var c=n.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelectorAll('img').forEach(function(i){i.alt='';});t.appendChild(c);});
+ base.forEach(function(n){var c=n.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelectorAll('img').forEach(function(i){i.alt='';});t.appendChild(c);});
+ t.style.animationDuration=(dur*k)+'s'; /* misma velocidad aunque haya más logos */
+ fit();}
+if(document.readyState==='complete')fit();else window.addEventListener('load',fit);
+window.addEventListener('resize',fit);})();
+</script>
+<script>
 (function(){var mq=document.querySelector('.wrap-logos .mq');if(!mq)return;
 /* Solo con mouse: en pantallas táctiles los logos quedan en gris (el toque sobre un carrusel en movimiento no es confiable) */
 if(window.matchMedia&&!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
