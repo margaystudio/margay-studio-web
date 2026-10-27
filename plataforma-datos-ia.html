@@ -331,7 +331,15 @@ html{scroll-behavior:smooth}
 .ia-pc .ia-ill .fl{fill:#EEF7F1}.ia-pc .ia-ill .ac{stroke:#2F6B4A}.ia-pc .ia-ill .acf{fill:#7CC39C;stroke:none}
 .ia-pc p{margin:0;font-size:15.5px;line-height:1.55;color:#3D4A43;display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.19,1,.22,1),opacity .4s;opacity:0}
 .ia-pc p span{overflow:hidden;display:block}
-.ia-pc.on{background:#E6F4EB;border-color:#B9DCC6;min-height:500px;transform:translateY(-8px)}
+.ia-pc.on{min-height:500px;transform:translateY(-8px)}
+.ia-pc .ia-ill .fl2{fill:#fff}
+.ia-pc[data-tone="mint"].on{background:#E6F4EB;border-color:#B9DCC6}
+.ia-pc[data-tone="mint"].on h3{color:#1D5735}
+.ia-pc[data-tone="deep"].on{background:#15261C;border-color:#15261C}
+.ia-pc[data-tone="deep"].on h3{color:#EEF7F1}.ia-pc[data-tone="deep"].on p{color:#EEF7F1;opacity:.88}
+.ia-pc[data-tone="deep"].on .ia-ill svg{stroke:#EEF7F1}.ia-pc[data-tone="deep"].on .ia-ill .fl{fill:#1F3528}.ia-pc[data-tone="deep"].on .ia-ill .fl2{fill:#EEF7F1}.ia-pc[data-tone="deep"].on .ia-ill .ac{stroke:#7CC39C}.ia-pc[data-tone="deep"].on .ia-ill .acf{fill:#7CC39C}
+.ia-pc[data-tone="sand"].on{background:#FFF2D9;border-color:#F0D9B0}
+.ia-pc[data-tone="sand"].on h3{color:#6B4E19}.ia-pc[data-tone="sand"].on .ia-ill .fl{fill:#FFE6BF}.ia-pc[data-tone="sand"].on .ia-ill .ac{stroke:#B9653A}
 .ia-pc.on p{grid-template-rows:1fr;opacity:1}
 .ia-pc.on .ia-ill svg{transform:translateY(-6px) scale(1.04)}
 .ia-pc .ia-ill .fly{animation:ia-fly 6s ease-in-out infinite}
@@ -381,7 +389,7 @@ html{scroll-behavior:smooth}
 <a class="ia-back" href="soluciones.html">← Todas las soluciones</a>
 <span class="ia-mono" style="color:#52745F">Analítica con IA · Plataforma de datos</span>
 <h1>Preguntale<br/>a tu <em>negocio</em>.</h1>
-<p>Tus ventas, tu stock, tus sucursales. Hacés la pregunta en tu idioma y la inteligencia artificial analiza tus propios datos y te responde con el gráfico y la explicación.</p>
+<p>Ventas, stock, combustible, toneladas, visitantes: lo que ya generan tus sistemas. Hacés la pregunta en tu idioma y la inteligencia artificial analiza tus propios datos y te responde con el gráfico y la explicación.</p>
 <div class="cta-row">
 <a class="btn" href="#contacto" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:6px;background:#7CC39C;color:#0E1A14;font-weight:500;font-size:15px">Agendar una charla</a>
 <a class="btn" href="plataforma-datos.html" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:6px;border:1px solid #4FA377;font-weight:500;font-size:15px">Ver la plataforma de datos</a>
@@ -494,39 +502,38 @@ html{scroll-behavior:smooth}
 <span class="ia-mono" style="color:#568267">Por qué funciona</span>
 <h2 class="ia-h2" style="margin-top:12px">No es magia. Son tus datos, ordenados.</h2>
 <div class="ia-pgrid" id="ia-pilares" data-reveal="">
-<article class="ia-pc" tabindex="0">
-<h3>Sobre tus datos reales</h3>
+<article class="ia-pc" data-tone="mint" tabindex="0">
+<h3>Preguntá en tu idioma</h3>
+<div class="ia-ill" aria-hidden="true"><svg viewBox="0 0 220 170">
+<g class="fly"><path class="fl" d="M24 30h110a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H60l-18 16V80H24a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z"/><path d="M34 50h70M34 62h48"/></g>
+<g class="fly2"><path class="fl2" d="M196 96H86a10 10 0 0 0-10 10v30a10 10 0 0 0 10 10h74l18 16v-16h18a10 10 0 0 0 10-10v-30a10 10 0 0 0-10-10z"/><path class="ac" d="M96 118h60M96 130h40"/><circle class="acf" cx="186" cy="124" r="4"/></g>
+</svg></div>
+<p><span>Como se lo preguntarías a alguien del equipo: "¿cuánto vendió la estación 12 el fin de semana?", "¿cuántas toneladas levantamos este mes?", "¿de dónde vinieron los visitantes en enero?". La respuesta sale de la información de tu organización, no de internet.</span></p>
+</article>
+<article class="ia-pc on" data-tone="deep" tabindex="0">
+<h3>Analítica con IA</h3>
 <div class="ia-ill" aria-hidden="true"><svg viewBox="0 0 220 170">
 <g class="fly"><rect class="fl" x="20" y="22" width="64" height="26" rx="6"/><path d="M32 35h40"/></g>
 <g class="fly2"><rect class="fl" x="12" y="70" width="64" height="26" rx="6"/><path d="M24 83h40"/></g>
 <g class="fly"><rect class="fl" x="26" y="118" width="64" height="26" rx="6"/><path d="M38 131h40"/></g>
 <path class="ac" d="M84 35c30 0 30 48 60 48M76 83h68M90 131c30 0 30-48 54-48" stroke-dasharray="4 5"/>
-<rect x="144" y="56" width="62" height="54" rx="10"/>
-<circle class="acf" cx="175" cy="83" r="9"/>
-<path d="M171 83l3 3 6-6" stroke="#0E1A14"/>
+<rect class="fl2" x="144" y="56" width="62" height="54" rx="10"/>
+<path class="ac" d="M154 98l12-14 10 8 14-20 10 12"/>
+<path class="ac" d="M178 14l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+<path class="ac" d="M204 36l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/>
 </svg></div>
-<p><span>Las respuestas salen de la información de tu negocio: facturación, stock, sucursales. No de internet. Si un número no está en tus sistemas, te lo decimos en vez de inventarlo.</span></p>
+<p><span>La inteligencia artificial hace el trabajo del analista: cruza tus fuentes, detecta qué cambió y por qué, y te lo cuenta con el gráfico y la explicación. Si un número no está en tus datos, te lo dice en vez de inventarlo.</span></p>
 </article>
-<article class="ia-pc on" tabindex="0">
-<h3>Analítica con IA</h3>
-<div class="ia-ill" aria-hidden="true"><svg viewBox="0 0 220 170">
-<g class="fly"><path class="fl" d="M24 30h110a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H60l-18 16V80H24a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z"/><path d="M34 50h70M34 62h48"/></g>
-<g class="fly2"><rect x="92" y="96" width="112" height="60" rx="10" fill="#fff"/><path class="ac" d="M106 142l20-22 18 14 22-30 20 18"/><circle class="acf" cx="186" cy="122" r="4"/></g>
-<path class="ac" d="M166 20l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
-<path class="ac" d="M196 44l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/>
-</svg></div>
-<p><span>Preguntás en tu idioma y la inteligencia artificial hace el trabajo del analista: cruza ventas, stock y operaciones, arma el gráfico, te explica qué pasó y te sugiere la siguiente pregunta. Sin reportes a medida ni esperar al lunes.</span></p>
-</article>
-<article class="ia-pc" tabindex="0">
+<article class="ia-pc" data-tone="sand" tabindex="0">
 <h3>Para todo tu equipo</h3>
 <div class="ia-ill" aria-hidden="true"><svg viewBox="0 0 220 170">
 <g class="fly"><circle class="fl" cx="50" cy="48" r="18"/><circle cx="50" cy="42" r="6"/><path d="M38 60c3-8 21-8 24 0"/></g>
 <g class="fly2"><circle class="fl" cx="170" cy="48" r="18"/><circle cx="170" cy="42" r="6"/><path d="M158 60c3-8 21-8 24 0"/></g>
 <g class="fly"><circle class="fl" cx="110" cy="128" r="18"/><circle cx="110" cy="122" r="6"/><path d="M98 140c3-8 21-8 24 0"/></g>
-<rect x="80" y="54" width="60" height="40" rx="8" fill="#fff"/><path class="ac" d="M90 84l10-10 10 6 14-16 8 8"/>
+<rect class="fl2" x="80" y="54" width="60" height="40" rx="8"/><path class="ac" d="M90 84l10-10 10 6 14-16 8 8"/>
 <path class="ac" d="M68 50h12M140 50h12M110 94v16" stroke-dasharray="3 4"/>
 </svg></div>
-<p><span>El dueño, el encargado de sucursal y la administración miran los mismos números. Cada uno pregunta lo suyo y nadie discute de qué planilla salió el dato.</span></p>
+<p><span>El dueño, el gerente de una estación o el responsable de un área en una intendencia miran los mismos números. Cada uno pregunta lo suyo y nadie discute de qué planilla salió el dato.</span></p>
 </article>
 </div>
 </div>
