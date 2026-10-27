@@ -12,8 +12,8 @@
 body{margin:0;background:#FFFFFF}
 a{color:#0E1A14;text-decoration:none}a:hover{color:#2F6B4A}
 @keyframes mq-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.mq-track{animation:mq-slide 40s linear infinite}
-@media (prefers-reduced-motion: reduce){.mq-track{animation:none}}
+.mq-track{animation:mq-slide 28s linear infinite;will-change:transform;transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+@media (prefers-reduced-motion: reduce){.mq-track{animation-duration:60s}}
 html{scroll-behavior:smooth}
 /* preloader */
 .pre{position:fixed;inset:0;z-index:50;background:#0E1A14;color:#EEF7F1;display:flex;align-items:flex-end;justify-content:space-between;padding:32px 40px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.015em;transition:transform .9s cubic-bezier(.76,0,.24,1)}
@@ -167,6 +167,8 @@ html{scroll-behavior:smooth}
 <section aria-label="Empresas que confían en nosotros" class="sec" style="background: transparent">
 <style>
 /* Logos en gris carbón; al pasar el mouse cambian al color de marca (suavizado). El carrusel nunca se detiene. */
+.wrap-logos .mq{transform:translateZ(0);-webkit-tap-highlight-color:transparent}
+.wrap-logos .lg img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;pointer-events:none}
 .wrap-logos .lg{display:inline-grid;align-items:center;justify-items:center;height:70px}
 .wrap-logos .lg img{grid-area:1/1;width:auto;display:block;max-width:none}
 .wrap-logos .lg-g{opacity:1;transition:opacity .5s ease}
@@ -178,7 +180,7 @@ html{scroll-behavior:smooth}
 @media(max-width:760px){
  .wrap-logos{padding:46px 0 40px!important;gap:22px!important}
  .wrap-logos .mq{mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important}
- .wrap-logos .mq-track{gap:40px!important;padding-right:40px!important;animation-duration:26s!important}
+ .wrap-logos .mq-track{gap:40px!important;padding-right:40px!important;animation-duration:18s!important}
  .wrap-logos .lg{height:56px}
  .wrap-logos .lg img{height:auto!important;max-height:34px;max-width:150px}
 }
@@ -488,11 +490,20 @@ Escribinos por WhatsApp
 })();</script>
 <script>
 (function(){var mq=document.querySelector('.wrap-logos .mq');if(!mq)return;
-var x=-1,y=-1,on=false,cur=null,raf=0;
+var x=-1,y=-1,on=false,cur=null,raf=0,offT=0,lastTouch=0;
 function set(el){if(el===cur)return;if(cur)cur.classList.remove('hot');cur=el;if(el)el.classList.add('hot');}
-function tick(){raf=0;if(!on){set(null);return;}var t=document.elementFromPoint(x,y);set(t&&t.closest?t.closest('.lg'):null);raf=requestAnimationFrame(tick);}
-mq.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;x=e.clientX;y=e.clientY;on=true;if(!raf)raf=requestAnimationFrame(tick);});
-mq.addEventListener('pointerleave',function(){on=false;set(null);});
+function pick(){var t=document.elementFromPoint(x,y);set(t&&t.closest?t.closest('.lg'):null);}
+function tick(){raf=0;if(!on)return;pick();raf=requestAnimationFrame(tick);}
+function start(px,py){clearTimeout(offT);x=px;y=py;on=true;pick();if(!raf)raf=requestAnimationFrame(tick);}
+function stop(delay){on=false;clearTimeout(offT);offT=setTimeout(function(){set(null);},delay||0);}
+/* Mouse */
+mq.addEventListener('mousemove',function(e){if(Date.now()-lastTouch<1200)return;start(e.clientX,e.clientY);});
+mq.addEventListener('mouseleave',function(){if(Date.now()-lastTouch<1200)return;stop(0);});
+/* Dedo: color mientras se toca y un momento después de soltar */
+mq.addEventListener('touchstart',function(e){lastTouch=Date.now();var t=e.touches[0];start(t.clientX,t.clientY);},{passive:true});
+mq.addEventListener('touchmove',function(e){lastTouch=Date.now();var t=e.touches[0];x=t.clientX;y=t.clientY;},{passive:true});
+mq.addEventListener('touchend',function(){lastTouch=Date.now();stop(900);},{passive:true});
+mq.addEventListener('touchcancel',function(){stop(900);},{passive:true});
 })();
 </script>
 <!-- Aviso de cookies + Google Analytics con consentimiento -->
