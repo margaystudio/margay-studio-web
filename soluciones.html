@@ -168,7 +168,14 @@ html{scroll-behavior:smooth}
 .md-dot{width:7px;height:7px;border-radius:50%;background:#7CC39C;display:inline-block;margin-right:6px}
 .md-tabs{display:flex;gap:4px;padding:10px 12px;background:#EDF3EE}
 .md-tabs button{flex:1;border:0;background:transparent;border-radius:7px;padding:10px 4px;font:600 11px 'Plus Jakarta Sans',sans-serif;color:#55705E;cursor:pointer;transition:background .2s}
-.md-tabs button[aria-selected="true"]{background:#fff;color:#1D5735;box-shadow:0 1px 6px #15341d14}
+.md-tabs button[aria-selected="true"]{background:#fff;color:#1D5735;box-shadow:0 2px 8px #15341d24;outline:2px solid #7CC39C;outline-offset:-2px}
+.md-tabs button:hover{background:#D7EADD;color:#174B2C}
+.md-tabs button:focus-visible,.md-bars button:focus-visible{outline:3px solid #4FA377;outline-offset:2px}
+.md-bars button{display:block;flex:1;align-self:end;border:0;padding:0;border-radius:4px 4px 0 0;background:linear-gradient(#7CC39C,#3B9466);min-height:8px;cursor:pointer;transition:filter .2s,transform .2s}
+.md-bars button:hover,.md-bars button[aria-pressed="true"]{filter:brightness(.9);transform:scaleX(1.07)}
+.md-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.md-controls select{border:1px solid #C7DACD;border-radius:7px;background:#fff;color:#24553A;font:600 11px 'Plus Jakarta Sans',sans-serif;padding:7px 10px;cursor:pointer}
+.md-feedback{font-size:11px;color:#39734F;min-height:17px;margin-top:8px}
 .md-pane{padding:20px;min-height:300px;box-sizing:border-box}
 .md-pane[hidden]{display:none!important}
 .md-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:14px 0}
@@ -201,9 +208,10 @@ html{scroll-behavior:smooth}
 </div>
 <div class="md-pane" id="md-pane-tableros" role="tabpanel" aria-labelledby="md-tab-tableros">
 <div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><strong style="font-size:14px">Resumen de ventas</strong><span style="font-size:10px;color:#698070">Últimos 7 días · Todas las sucursales</span></div>
-<div class="md-kpis"><div class="md-kpi"><small>Ventas</small><strong>$ 2,48 M</strong><em>↑ 8,2% vs. anterior</em></div><div class="md-kpi"><small>Operaciones</small><strong>4.812</strong><em>↑ 3,4%</em></div><div class="md-kpi"><small>Ticket promedio</small><strong>$ 516</strong><em>↑ 4,6%</em></div></div>
+<div class="md-controls"><label for="md-branch" style="font-size:11px;color:#587461">Sucursal:</label><select id="md-branch" aria-label="Filtrar sucursal"><option value="all">Todas las sucursales</option><option value="norte">Sucursal Norte</option><option value="centro">Sucursal Centro</option><option value="sur">Sucursal Sur</option></select></div>
+<div class="md-kpis"><div class="md-kpi"><small>Ventas</small><strong id="md-sales">$ 2,48 M</strong><em>↑ 8,2% vs. anterior</em></div><div class="md-kpi"><small>Operaciones</small><strong>4.812</strong><em>↑ 3,4%</em></div><div class="md-kpi"><small>Ticket promedio</small><strong>$ 516</strong><em>↑ 4,6%</em></div></div>
 <div style="font-size:11px;font-weight:700;margin:10px 0 7px">Evolución diaria</div>
-<div class="md-bars" role="img" aria-label="Gráfico ilustrativo de ventas diarias"><i style="height:45%"></i><i style="height:62%"></i><i style="height:53%"></i><i style="height:78%"></i><i style="height:66%"></i><i style="height:94%"></i><i style="height:84%"></i></div>
+<div class="md-bars" role="group" aria-label="Ventas diarias; seleccioná un día"><button type="button" aria-label="Lunes" style="height:45%"></button><button type="button" aria-label="Martes" style="height:62%"></button><button type="button" aria-label="Miércoles" style="height:53%"></button><button type="button" aria-label="Jueves" style="height:78%"></button><button type="button" aria-label="Viernes" style="height:66%"></button><button type="button" aria-label="Sábado" style="height:94%"></button><button type="button" aria-label="Domingo" style="height:84%"></button></div><div class="md-feedback" id="md-feedback" aria-live="polite">Elegí una sucursal o seleccioná una barra para explorar los datos.</div>
 <div class="md-demo-note">Datos ficticios · Ejemplo ilustrativo</div>
 </div>
 <div class="md-pane" id="md-pane-alertas" role="tabpanel" aria-labelledby="md-tab-alertas" hidden>
@@ -223,6 +231,9 @@ html{scroll-behavior:smooth}
 </div>
 <script>
 (function(){var tabs=Array.from(document.querySelectorAll('[data-md-tab]'));tabs.forEach(function(btn,i){btn.addEventListener('click',function(){select(btn)});btn.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();var next=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(next);next.focus()})});function select(btn){tabs.forEach(function(t){var on=t===btn;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById('md-pane-'+t.dataset.mdTab).hidden=!on})}})();
+</script>
+<script>
+(function(){var sel=document.getElementById('md-branch'),sales=document.getElementById('md-sales'),feedback=document.getElementById('md-feedback'),bars=Array.from(document.querySelectorAll('.md-bars button'));if(!sel)return;var values={all:['$ 2,48 M',[45,62,53,78,66,94,84]],norte:['$ 710 mil',[36,50,44,69,57,74,62]],centro:['$ 960 mil',[54,69,60,82,75,95,89]],sur:['$ 810 mil',[43,56,48,73,61,88,78]]};sel.addEventListener('change',function(){var v=values[sel.value];sales.textContent=v[0];bars.forEach(function(b,i){b.style.height=v[1][i]+'%';b.setAttribute('aria-pressed','false')});feedback.textContent='Mostrando '+sel.options[sel.selectedIndex].text.toLowerCase()+' · datos de ejemplo.'});bars.forEach(function(b,i){b.addEventListener('click',function(){bars.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');feedback.textContent=b.getAttribute('aria-label')+': '+Math.round(values[sel.value][1][i]*1.12)+' mil en ventas (ejemplo).'})})})();
 </script>
 </section>
 <!-- PLATAFORMA DE CONOCIMIENTO -->
