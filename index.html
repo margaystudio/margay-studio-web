@@ -175,7 +175,6 @@ html{scroll-behavior:smooth}
 .wrap-logos .lg-c{opacity:0;transition:opacity .5s ease}
 .wrap-logos .lg.hot .lg-g{opacity:0}
 .wrap-logos .lg.hot .lg-c{opacity:.78}
-@media(hover:none){.wrap-logos .lg-g,.wrap-logos .lg-c{transition-duration:.25s}}
 @media(prefers-reduced-motion:reduce){.wrap-logos .lg img{transition:none}}
 /* Carrusel compacto en celular */
 @media(max-width:760px){
@@ -491,19 +490,13 @@ Escribinos por WhatsApp
 })();</script>
 <script>
 (function(){var mq=document.querySelector('.wrap-logos .mq');if(!mq)return;
-var cur=null,offT=0,lastTouch=0,x=0,y=0,on=false,raf=0,sx=0,sy=0;
-function set(el){clearTimeout(offT);if(el===cur)return;if(cur)cur.classList.remove('hot');cur=el;if(el)el.classList.add('hot');}
-function at(px,py){var t=document.elementFromPoint(px,py);return t&&t.closest?t.closest('.lg'):null;}
-/* Mouse: el color sigue al puntero */
-function tick(){raf=0;if(!on)return;set(at(x,y));raf=requestAnimationFrame(tick);}
-mq.addEventListener('mousemove',function(e){if(Date.now()-lastTouch<1500)return;x=e.clientX;y=e.clientY;on=true;if(!raf)raf=requestAnimationFrame(tick);});
-mq.addEventListener('mouseleave',function(){if(Date.now()-lastTouch<1500)return;on=false;set(null);});
-/* Dedo: el color queda fijo en el logo tocado (se mueve con el carrusel) */
-mq.addEventListener('touchstart',function(e){lastTouch=Date.now();var t=e.touches[0];sx=t.clientX;sy=t.clientY;set(at(sx,sy));},{passive:true});
-mq.addEventListener('touchmove',function(e){lastTouch=Date.now();var t=e.touches[0];if(Math.abs(t.clientX-sx)>12||Math.abs(t.clientY-sy)>12)set(null);},{passive:true});
-function release(){lastTouch=Date.now();if(!cur)return;clearTimeout(offT);var el=cur;offT=setTimeout(function(){if(cur===el)set(null);},1500);}
-mq.addEventListener('touchend',release,{passive:true});
-mq.addEventListener('touchcancel',function(){lastTouch=Date.now();set(null);},{passive:true});
+/* Solo con mouse: en pantallas táctiles los logos quedan en gris (el toque sobre un carrusel en movimiento no es confiable) */
+if(window.matchMedia&&!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+var x=0,y=0,on=false,cur=null,raf=0;
+function set(el){if(el===cur)return;if(cur)cur.classList.remove('hot');cur=el;if(el)el.classList.add('hot');}
+function tick(){raf=0;if(!on)return;var t=document.elementFromPoint(x,y);set(t&&t.closest?t.closest('.lg'):null);raf=requestAnimationFrame(tick);}
+mq.addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;on=true;if(!raf)raf=requestAnimationFrame(tick);});
+mq.addEventListener('mouseleave',function(){on=false;set(null);});
 })();
 </script>
 <!-- Aviso de cookies + Google Analytics con consentimiento -->
