@@ -357,26 +357,15 @@ html{scroll-behavior:smooth}
 
 /* ---------- 5. CTA + puerta ---------- */
 .ia-cta{background:#fff}
-.ia-cta .ia-wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;padding:110px 24px}
-.ia-door{display:flex;justify-content:center}
-.ia-door-scene{position:relative;width:220px;height:300px;perspective:700px;perspective-origin:20% 50%}
-.ia-room{position:absolute;left:60px;top:0;width:110px;height:270px;background:#0E1A14;border:1.6px solid #0E1A14;border-radius:2px 2px 0 0;box-sizing:border-box;overflow:hidden}
-.ia-room i{position:absolute;border-radius:50%;background:#EEF7F1;animation:ia-tw 2.4s ease-in-out infinite}
-.ia-room i:nth-child(2n){animation-delay:.7s}.ia-room i:nth-child(3n){animation-delay:1.4s}
-@keyframes ia-tw{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
-.ia-light{position:absolute;left:-40px;top:20px;width:100px;height:250px;background:linear-gradient(90deg,rgba(124,195,156,0) 0%,rgba(124,195,156,.5) 100%);clip-path:polygon(100% 0,100% 100%,0 100%,0 40%);opacity:0;transition:opacity 1.2s ease .5s}
-.ia-leaf{position:absolute;left:60px;top:0;width:110px;height:270px;background:#fff;border:1.6px solid #0E1A14;border-radius:2px 2px 0 0;box-sizing:border-box;transform-origin:right center;transform:rotateY(0deg);transition:transform 1.6s cubic-bezier(.19,1,.22,1);backface-visibility:visible}
-.ia-leaf::before{content:"";position:absolute;inset:14px 12px;border:1px solid rgba(14,26,20,.3);border-radius:1px}
-.ia-floor{position:absolute;left:0;right:0;top:270px;height:1.6px;background:#0E1A14}
-.ia-door.in .ia-leaf{transform:rotateY(58deg)}
-.ia-door.in .ia-light{opacity:1}
-.ia-cta:hover .ia-door.in .ia-leaf{transform:rotateY(80deg)}
+.ia-cta .ia-wrap{display:flex;flex-direction:column;align-items:center;text-align:center;padding:110px 24px}
+.ia-cta .ia-wrap > div{align-items:center}
+.ia-cta .cta-row{justify-content:center}
 
 /* ---------- responsive ---------- */
 @media(max-width:1024px){.ia-pgrid{grid-template-columns:1fr 1fr}.ia-pc{min-height:400px}}
-@media(max-width:900px){.ia-dl{grid-template-columns:1fr;gap:28px}.ia-cta .ia-wrap{grid-template-columns:1fr;padding:72px 24px;text-align:center}.ia-cta .cta-row{justify-content:center}.ia-cta .ia-sub{margin:0 auto}}
-@media(max-width:760px){.ia-wrap{padding:56px 16px}.ia-pgrid{grid-template-columns:1fr;margin-top:28px}.ia-pc{min-height:0!important;transform:none!important}.ia-pc p{opacity:1;transform:none;min-height:0}.ia-pc .ia-ill{min-height:120px}.ia-dl{padding:56px 16px}.ia-door-scene{transform:scale(.8);transform-origin:top center;height:250px}}
-@media(prefers-reduced-motion:reduce){.ia-card,.ia-pc,.ia-leaf,.ia-ring .val,.ia-bars i{transition:none!important}.ia-hint i,.ia-room i,.ia-ask-in .cur,}
+@media(max-width:900px){.ia-dl{grid-template-columns:1fr;gap:28px}.ia-cta .ia-wrap{padding:72px 24px}}
+@media(max-width:760px){.ia-wrap{padding:56px 16px}.ia-pgrid{grid-template-columns:1fr;margin-top:28px}.ia-pc{min-height:0!important;transform:none!important}.ia-pc p{opacity:1;transform:none;min-height:0}.ia-pc .ia-ill{min-height:120px}.ia-dl{padding:56px 16px}}
+@media(prefers-reduced-motion:reduce){.ia-card,.ia-pc,.ia-ring .val,.ia-bars i{transition:none!important}.ia-hint i,.ia-ask-in .cur,}
 </style>
 
 <!-- 1 · HERO + ENSAMBLE -->
@@ -586,14 +575,6 @@ Escribinos por WhatsApp
 <a class="btn" href="mailto:contacto@margaystudio.io?subject=Consulta%20desde%20la%20web" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:6px;border:1px solid #4FA377;font-weight:500;font-size:15px">Enviar un correo</a>
 </div>
 <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#5C6B62;letter-spacing:.015em">URUGUAY · TRABAJAMOS CON EMPRESAS DE LA REGIÓN</span>
-</div>
-<div class="ia-door" data-reveal="" data-d="2" aria-hidden="true">
-<div class="ia-door-scene">
-<div class="ia-room"><i style="left:22px;top:50px;width:3px;height:3px"></i><i style="left:70px;top:80px;width:2px;height:2px"></i><i style="left:40px;top:130px;width:4px;height:4px"></i><i style="left:84px;top:170px;width:2.5px;height:2.5px"></i><i style="left:18px;top:200px;width:3px;height:3px"></i><i style="left:58px;top:232px;width:2px;height:2px"></i><i style="left:92px;top:30px;width:2px;height:2px"></i><i style="left:30px;top:250px;width:2px;height:2px"></i></div>
-<div class="ia-light"></div>
-<div class="ia-leaf"></div>
-<div class="ia-floor"></div>
-</div>
 </div>
 </div>
 </section>
