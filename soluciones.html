@@ -139,7 +139,7 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 .dg-light svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none;opacity:.8}
 .dg-light .flow .dot{background:var(--acc);box-shadow:0 0 10px var(--acc)}
 .dg-light .core{animation:none}
-@media(max-width:900px){.dg-wrap{grid-template-columns:1fr!important;gap:28px!important}}
+@media(max-width:600px){.dg-panel{padding:20px 16px 24px!important}}
 </style>
 </head>
 <body>
@@ -177,35 +177,8 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 <!-- OMBÚ -->
 <section class="sec" id="ombu" style="background:#F6F8F5">
 <style>
-.md-layout{max-width:1200px;margin:auto;padding:36px 24px 56px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
-.md-demo{background:#F8FAF8;color:#1C3023;border:1px solid #D8E8DD;border-radius:15px;overflow:hidden;box-shadow:0 18px 50px rgba(14,26,20,.10);font-family:'Plus Jakarta Sans',sans-serif}
-.md-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:1px solid #DFEAE1;font-size:12px;font-weight:700}
-.md-dot{width:7px;height:7px;border-radius:50%;background:#7CC39C;display:inline-block;margin-right:6px}
-.md-tabs{display:flex;gap:4px;padding:10px 12px;background:#EDF3EE}
-.md-tabs button{flex:1;border:0;background:transparent;border-radius:7px;padding:10px 4px;font:600 11px 'Plus Jakarta Sans',sans-serif;color:#55705E;cursor:pointer;transition:background .2s}
-.md-tabs button[aria-selected="true"]{background:#fff;color:#1D5735;box-shadow:0 2px 8px #15341d24;outline:2px solid #7CC39C;outline-offset:-2px}
-.md-tabs button:hover{background:#D7EADD;color:#174B2C}
-.md-tabs button:focus-visible,.md-bars button:focus-visible{outline:3px solid #4FA377;outline-offset:2px}
-.md-bars button{display:block;flex:1;align-self:end;border:0;padding:0;border-radius:4px 4px 0 0;background:linear-gradient(#7CC39C,#3B9466);min-height:8px;cursor:pointer;transition:filter .2s,transform .2s}
-.md-bars button:hover,.md-bars button[aria-pressed="true"]{filter:brightness(.9);transform:scaleX(1.07)}
-.md-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
-.md-controls select{border:1px solid #C7DACD;border-radius:7px;background:#fff;color:#24553A;font:600 11px 'Plus Jakarta Sans',sans-serif;padding:7px 10px;cursor:pointer}
-.md-feedback{font-size:11px;color:#39734F;min-height:17px;margin-top:8px}
-.md-pane{padding:20px;min-height:300px;box-sizing:border-box}
-.md-pane[hidden]{display:none!important}
-.md-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:14px 0}
-.md-kpi{border:1px solid #E2EBE4;border-radius:9px;padding:11px;background:white}
-.md-kpi small{font-size:10px;color:#63766A;display:block}.md-kpi strong{display:block;font-size:clamp(16px,2vw,22px);margin:6px 0 2px}.md-kpi em{font-size:10px;color:#278451;font-style:normal}
-.md-bars{height:120px;display:flex;align-items:end;gap:9px;padding:15px 12px 8px;border:1px solid #E2EBE4;border-radius:9px;background:repeating-linear-gradient(to top,#fff 0,#fff 28px,#ECF1ED 29px)}
-.md-bars i{display:block;flex:1;border-radius:4px 4px 0 0;background:linear-gradient(#7CC39C,#3B9466);min-height:8px}
-.md-alert{border:1px solid #E1EAE3;border-radius:10px;padding:13px;background:#fff;margin-top:10px;display:flex;gap:12px;align-items:flex-start}
-.md-alert b{display:block;font-size:12px;margin-bottom:4px}.md-alert p{font-size:11px;line-height:1.5;color:#617467;margin:0}
-.md-badge{font-size:10px;border-radius:5px;padding:5px 7px;background:#FFF2D9;color:#96651A;white-space:nowrap}
-.md-question{background:#E8F3EC;border-radius:10px;padding:12px;font-size:12px;margin:15px 0 12px}
-.md-answer{background:#fff;border:1px solid #DDE9E0;border-radius:10px;padding:15px;font-size:12px;line-height:1.6}
-.md-answer strong{color:#286D46}.md-demo-note{font-size:10px;color:#6D8172;margin-top:12px}
-@media(max-width:900px){.md-layout{grid-template-columns:1fr;gap:26px}.md-pane{min-height:285px}}
-@media(max-width:460px){.md-layout{padding:52px 18px}.md-tabs button{font-size:10px}.md-pane{padding:13px;min-height:290px}.md-kpi{padding:8px}.md-kpi strong{font-size:16px}}
+.md-layout{max-width:1200px;margin:auto;padding:36px 24px 48px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+@media(max-width:900px){.md-layout{grid-template-columns:1fr;gap:26px}}
 </style>
 <div class="mod-head" data-reveal="" style="max-width:1200px;margin:auto;padding:80px 24px 0;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
 <div style="display:flex;align-items:center;gap:12px"><span style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;background:rgba(31,122,133,.12);flex:none"><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><g fill="none" stroke="#1F7A85" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27C8 18 15 11 24 11s16 7 18 16"/><path d="M24 27v10"/><path d="M12 37h24"/></g></svg></span><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#1F7A85">PLATAFORMA DE DATOS</span></div>
@@ -217,45 +190,17 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.45;color:#3D4F44;max-width:520px"><li style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#1F7A85;margin-top:9px"></span><span>Indicadores actualizados sin armar reportes a mano.</span></li><li style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#1F7A85;margin-top:9px"></span><span>Alertas cuando algo se sale de lo esperado.</span></li><li style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#1F7A85;margin-top:9px"></span><span>Con IA para preguntarle a tus datos desde el celular y generar informes.</span></li></ul>
 <p style="margin:4px 0 0;font-size:13px;color:#6F7C75">Ya funciona en empresas privadas y organismos públicos. Lo adaptamos a cada operación.</p>
 </div>
-<div class="md-demo" data-reveal="" data-d="2" aria-label="Demostración interactiva de la plataforma de datos">
-<div class="md-top"><span><span class="md-dot"></span>Margay <span style="font-weight:400;color:#6E8475">/ Visión del negocio</span></span><span style="color:#668471;font-weight:500">Demo</span></div>
-<div class="md-tabs" role="tablist" aria-label="Explorar funciones de datos">
-<button type="button" role="tab" id="md-tab-tableros" aria-controls="md-pane-tableros" aria-selected="true" tabindex="0" data-md-tab="tableros">Tableros</button>
-<button type="button" role="tab" id="md-tab-alertas" aria-controls="md-pane-alertas" aria-selected="false" tabindex="-1" data-md-tab="alertas">Alertas</button>
-<button type="button" role="tab" id="md-tab-preguntas" aria-controls="md-pane-preguntas" aria-selected="false" tabindex="-1" data-md-tab="preguntas">Preguntale a tus datos</button>
-</div>
-<div class="md-pane" id="md-pane-tableros" role="tabpanel" aria-labelledby="md-tab-tableros">
-<div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><strong style="font-size:14px">Resumen de ventas</strong><span style="font-size:10px;color:#698070">Últimos 7 días · Todas las sucursales</span></div>
-<div class="md-controls"><label for="md-branch" style="font-size:11px;color:#587461">Sucursal:</label><select id="md-branch" aria-label="Filtrar sucursal"><option value="all">Todas las sucursales</option><option value="norte">Sucursal Norte</option><option value="centro">Sucursal Centro</option><option value="sur">Sucursal Sur</option></select></div>
-<div class="md-kpis"><div class="md-kpi"><small>Ventas</small><strong id="md-sales">$ 2,48 M</strong><em>↑ 8,2% vs. anterior</em></div><div class="md-kpi"><small>Operaciones</small><strong>4.812</strong><em>↑ 3,4%</em></div><div class="md-kpi"><small>Ticket promedio</small><strong>$ 516</strong><em>↑ 4,6%</em></div></div>
-<div style="font-size:11px;font-weight:700;margin:10px 0 7px">Evolución diaria</div>
-<div class="md-bars" role="group" aria-label="Ventas diarias; seleccioná un día"><button type="button" aria-label="Lunes" style="height:45%"></button><button type="button" aria-label="Martes" style="height:62%"></button><button type="button" aria-label="Miércoles" style="height:53%"></button><button type="button" aria-label="Jueves" style="height:78%"></button><button type="button" aria-label="Viernes" style="height:66%"></button><button type="button" aria-label="Sábado" style="height:94%"></button><button type="button" aria-label="Domingo" style="height:84%"></button></div><div class="md-feedback" id="md-feedback" aria-live="polite">Elegí una sucursal o seleccioná una barra para explorar los datos.</div>
-<div class="md-demo-note">Datos ficticios · Ejemplo ilustrativo</div>
-</div>
-<div class="md-pane" id="md-pane-alertas" role="tabpanel" aria-labelledby="md-tab-alertas" hidden>
-<strong style="font-size:14px">Lo que merece tu atención</strong>
-<div class="md-alert"><span class="md-badge">Atención</span><div><b>Caída de ventas · Sucursal Norte</b><p>Las ventas bajaron 12% respecto del promedio de los últimos 7 días.</p></div></div>
-<div class="md-alert"><span class="md-badge" style="background:#E7F3EA;color:#31734D">Seguimiento</span><div><b>Variación en ticket promedio</b><p>El ticket promedio subió 9% en Sucursal Centro.</p></div></div>
-<div class="md-alert"><span class="md-badge" style="background:#E7F3EA;color:#31734D">Reporte</span><div><b>Resumen semanal disponible</b><p>Los indicadores consolidados están listos para revisar.</p></div></div>
-<div class="md-demo-note">Alertas simuladas · Sin datos de clientes</div>
-</div>
-<div class="md-pane" id="md-pane-preguntas" role="tabpanel" aria-labelledby="md-tab-preguntas" hidden>
-<strong style="font-size:14px">Preguntale a tus datos</strong>
-<div class="md-question">¿Qué sucursales vendieron menos esta semana?</div>
-<div class="md-answer"><strong>Resumen del análisis</strong><br>En este ejemplo, 3 sucursales tuvieron ventas inferiores a la semana anterior.<div style="display:flex;flex-direction:column;gap:9px;margin-top:14px"><div style="font-size:11px">Sucursal Norte <span style="float:right">−12%</span><div style="height:7px;background:#F0E8E2;border-radius:4px;margin-top:4px"><div style="width:78%;height:100%;background:#D9A078;border-radius:4px"></div></div></div><div style="font-size:11px">Sucursal Este <span style="float:right">−7%</span><div style="height:7px;background:#F0E8E2;border-radius:4px;margin-top:4px"><div style="width:48%;height:100%;background:#D9A078;border-radius:4px"></div></div></div><div style="font-size:11px">Sucursal Sur <span style="float:right">−4%</span><div style="height:7px;background:#F0E8E2;border-radius:4px;margin-top:4px"><div style="width:30%;height:100%;background:#D9A078;border-radius:4px"></div></div></div></div></div>
-<div class="md-demo-note">Respuesta simulada · No es una consulta en vivo</div>
-</div>
-</div>
-</div>
-<script>
-(function(){var tabs=Array.from(document.querySelectorAll('[data-md-tab]'));tabs.forEach(function(btn,i){btn.addEventListener('click',function(){select(btn)});btn.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();var next=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(next);next.focus()})});function select(btn){tabs.forEach(function(t){var on=t===btn;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById('md-pane-'+t.dataset.mdTab).hidden=!on})}})();
-</script>
+<figure class="shot-frame" data-reveal="" data-d="2" style="margin:0;border-radius:12px;border:1px solid rgba(14,26,20,.12);background:#fff;box-shadow:0 18px 50px rgba(14,26,20,.12);overflow:hidden">
+<div style="display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(14,26,20,.08);background:#F6F8F5"><span style="width:9px;height:9px;border-radius:50%;background:#D9DED9"></span><span style="width:9px;height:9px;border-radius:50%;background:#D9DED9"></span><span style="width:9px;height:9px;border-radius:50%;background:#D9DED9"></span><span style="margin-left:10px;font:500 11px 'JetBrains Mono',monospace;color:#5C6B62">OMBÚ · CLIENTES COMBUSTIBLE — GANA / PIERDE</span></div>
+<img src="assets/screens/ombu-gana-pierde.png" alt="Pantalla de Ombú: clientes de combustible que ganan y pierden litros, con indicadores y gráficos de distribución" loading="lazy" width="1148" height="630" style="display:block;width:100%;height:auto">
+<figcaption style="padding:8px 14px;font-size:11px;color:#6F7C75;border-top:1px solid rgba(14,26,20,.08)">Captura real · datos de demostración</figcaption>
+</figure>
 <script>
 (function(){var sel=document.getElementById('md-branch'),sales=document.getElementById('md-sales'),feedback=document.getElementById('md-feedback'),bars=Array.from(document.querySelectorAll('.md-bars button'));if(!sel)return;var values={all:['$ 2,48 M',[45,62,53,78,66,94,84]],norte:['$ 710 mil',[36,50,44,69,57,74,62]],centro:['$ 960 mil',[54,69,60,82,75,95,89]],sur:['$ 810 mil',[43,56,48,73,61,88,78]]};sel.addEventListener('change',function(){var v=values[sel.value];sales.textContent=v[0];bars.forEach(function(b,i){b.style.height=v[1][i]+'%';b.setAttribute('aria-pressed','false')});feedback.textContent='Mostrando '+sel.options[sel.selectedIndex].text.toLowerCase()+' · datos de ejemplo.'});bars.forEach(function(b,i){b.addEventListener('click',function(){bars.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');feedback.textContent=b.getAttribute('aria-label')+': '+Math.round(values[sel.value][1][i]*1.12)+' mil en ventas (ejemplo).'})})})();
 </script>
-<div class="dg-wrap" data-reveal="" style="max-width:1200px;margin:auto;padding:0 24px 80px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center">
-<div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#1F7A85">CÓMO FUNCIONA</span><h3 style="margin:0;font-weight:500;font-size:clamp(22px,2.4vw,28px);line-height:1.15;letter-spacing:-.015em;color:#0E1A14">De tus sistemas a respuestas.</h3><p style="margin:0;max-width:480px;font-size:15px;line-height:1.5;color:#5C6B62">Conectamos lo que ya usás y lo ordenamos en un solo lugar. Sobre esa base salen los tableros, las alertas y las respuestas de la IA. No trabaja sobre el aire: trabaja sobre tus datos.</p></div>
-<div class="g3 dg dg-light" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center;--acc:#1F7A85;--tint:rgba(31,122,133,.10)">
+<div class="dg-wrap" data-reveal="" style="max-width:1200px;margin:auto;padding:0 24px 80px;box-sizing:border-box"><div class="dg-panel" style="border-radius:12px;border:1px solid rgba(14,26,20,.10);background:#fff;padding:28px 28px 32px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;max-width:720px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#1F7A85">CÓMO FUNCIONA</span><h3 style="margin:0;font-weight:500;font-size:clamp(22px,2.4vw,28px);line-height:1.15;letter-spacing:-.015em;color:#0E1A14">De tus sistemas a respuestas.</h3><p style="margin:0;max-width:480px;font-size:15px;line-height:1.5;color:#5C6B62">Conectamos lo que ya usás y lo ordenamos en un solo lugar. Sobre esa base salen los tableros, las alertas y las respuestas de la IA. No trabaja sobre el aire: trabaja sobre tus datos.</p></div>
+<div class="g3 dg dg-light" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr);gap:16px;align-items:center;--acc:#1F7A85;--tint:rgba(31,122,133,.10)">
 <div class="dg-src" style="display:flex;flex-direction:column;gap:8px"><div class="src"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Facturación</div><div class="src"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Planillas</div><div class="src"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4v8l-9 4-9-4z"/><path d="M3 8l9 4 9-4M12 12v8"/></svg>Stock</div><div class="src"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M7 21h10M12 17v4"/></svg>Punto de venta</div><div class="src"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v10h14V10M10 20v-6h4v6"/></svg>Sucursales</div></div>
 <div class="dg-core" style="display:flex;flex-direction:column;align-items:center;gap:10px">
 <div class="flow" style="width:100%;height:1px;background:rgba(14,26,20,.15)"><span class="dot"></span><span class="dot b"></span></div>
@@ -263,13 +208,11 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 <div class="flow" style="width:100%;height:1px;background:rgba(14,26,20,.15)"><span class="dot" style="animation-delay:.6s"></span><span class="dot b" style="animation-delay:1.9s"></span></div>
 </div>
 <div class="dg-out" style="display:flex;flex-direction:column;gap:8px"><div class="out hi"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>Preguntás con IA</div><div class="out"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Tableros</div><div class="out"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>Alertas</div><div class="out"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Informes</div></div>
-</div>
-</div>
-</section>
+</div></div></div></section>
 <!-- ARRAYÁN -->
 <section class="sec" id="arrayan" style="background:#fff">
 <style>
-.k-layout{max-width:1200px;margin:auto;padding:36px 24px 56px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.k-layout{max-width:1200px;margin:auto;padding:36px 24px 48px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
 .k-label{font:500 12px 'JetBrains Mono',monospace;color:#568267;letter-spacing:.02em}
 .k-stage{position:relative;min-height:250px;border-radius:12px;border:1px solid #D8E7DD;background:radial-gradient(circle at 50% 48%,#E3F3E9,#fff 68%);overflow:hidden}
 .k-stage svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
@@ -322,9 +265,9 @@ const answers={dif:'Ejemplo de respuesta de Tyto: consultá la política de dife
 root.querySelectorAll('[data-q]').forEach(btn=>btn.addEventListener('click',()=>{root.querySelector('#k-answer').textContent=answers[btn.dataset.q]}));
 })();
 </script>
-<div class="dg-wrap" data-reveal="" style="max-width:1200px;margin:auto;padding:0 24px 80px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center">
-<div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#4A5CB8">CÓMO FUNCIONA</span><h3 style="margin:0;font-weight:500;font-size:clamp(22px,2.4vw,28px);line-height:1.15;letter-spacing:-.015em;color:#0E1A14">De lo que sabe tu gente a documentación validada.</h3><p style="margin:0;max-width:480px;font-size:15px;line-height:1.5;color:#5C6B62">Relevamos con entrevistas, capturas y grabaciones. La IA lo convierte en procedimientos, alguien de tu empresa los aprueba, y recién ahí quedan disponibles para consultar.</p></div>
-<div class="g3 dg dg-light" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center;--acc:#4A5CB8;--tint:rgba(74,92,184,.10)">
+<div class="dg-wrap" data-reveal="" style="max-width:1200px;margin:auto;padding:0 24px 80px;box-sizing:border-box"><div class="dg-panel" style="border-radius:12px;border:1px solid rgba(14,26,20,.10);background:#F6F8F5;padding:28px 28px 32px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;max-width:720px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#4A5CB8">CÓMO FUNCIONA</span><h3 style="margin:0;font-weight:500;font-size:clamp(22px,2.4vw,28px);line-height:1.15;letter-spacing:-.015em;color:#0E1A14">De lo que sabe tu gente a documentación validada.</h3><p style="margin:0;max-width:480px;font-size:15px;line-height:1.5;color:#5C6B62">Relevamos con entrevistas, capturas y grabaciones. La IA lo convierte en procedimientos, alguien de tu empresa los aprueba, y recién ahí quedan disponibles para consultar.</p></div>
+<div class="g3 dg dg-light" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr);gap:16px;align-items:center;--acc:#4A5CB8;--tint:rgba(74,92,184,.10)">
 <div class="dg-src" style="display:flex;flex-direction:column;gap:8px"><div class="src"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4.5 4.5 0 0 1 7-3.5"/></svg>Entrevistas</div><div class="src"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10l4-2v8l-4-2z"/></svg>Capturas y grabaciones</div><div class="src"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg>Explicaciones en audio</div><div class="src"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Manuales que ya tenés</div></div>
 <div class="dg-core" style="display:flex;flex-direction:column;align-items:center;gap:10px">
 <div class="flow" style="width:100%;height:1px;background:rgba(14,26,20,.15)"><span class="dot"></span><span class="dot b"></span></div>
@@ -332,9 +275,7 @@ root.querySelectorAll('[data-q]').forEach(btn=>btn.addEventListener('click',()=>
 <div class="flow" style="width:100%;height:1px;background:rgba(14,26,20,.15)"><span class="dot" style="animation-delay:.6s"></span><span class="dot b" style="animation-delay:1.9s"></span></div>
 </div>
 <div class="dg-out" style="display:flex;flex-direction:column;gap:8px"><div class="out hi"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>Preguntás a Tyto</div><div class="out"><svg viewBox="0 0 24 24"><path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Procedimientos</div><div class="out"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Versiones e historial</div><div class="out"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Listo para auditorías</div></div>
-</div>
-</div>
-</section>
+</div></div></div></section>
 <section class="sec" id="sistemas" style="background: #EEF7F1">
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
 <div data-reveal="" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
