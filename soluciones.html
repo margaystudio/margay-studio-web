@@ -149,7 +149,7 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 
 
 /* composición de fragmentos de UI */
-@media(max-width:600px){.ui-grid{grid-template-columns:1fr!important}.ui-grid>div:nth-child(2){max-width:240px;margin:0 auto;width:100%}.ui-grid img[src$="ombu-kpis.png"]{display:none}}
+@media(max-width:600px){.ui-grid{grid-template-columns:minmax(0,60fr) minmax(0,40fr)!important;gap:10px!important}.ui-grid>div{gap:8px!important}.ui-grid img[src$="ombu-kpis.png"]{display:none!important}}
 /* franja "cómo funciona" */
 .fs-label{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.02em;color:var(--acc);margin-bottom:12px}
 .fs-row{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;background:#fff;border:1px solid rgba(14,26,20,.10)}
