@@ -149,6 +149,11 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 .fs-core b{font-weight:500;font-size:14px;color:#0E1A14}.fs-core small{font:500 10px 'JetBrains Mono',monospace;color:#5C6B62;letter-spacing:.02em}
 @media(max-width:900px){.fs-row{flex-direction:column;align-items:stretch;gap:10px}.fs-group,.fs-group:last-child{justify-content:center}.fs-arrow{flex:none;width:1px;height:28px;margin:0 auto}.fs-arrow .dot{top:auto;left:50%;margin-left:-4px;animation-name:flow-v}}
 @keyframes flow-v{0%{top:-4px;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:calc(100% - 4px);opacity:0}}
+
+/* capturas de sistemas: duotono verde en reposo, color al pasar el mouse */
+.sol .thumb img{filter:grayscale(1) sepia(.28) hue-rotate(100deg) saturate(.55) brightness(1.03);transition:filter .45s ease}
+.sol:hover .thumb img,.sol:focus-within .thumb img{filter:none}
+@media(hover:none){.sol .thumb img{filter:grayscale(1) sepia(.28) hue-rotate(100deg) saturate(.55) brightness(1.03)}}
 </style>
 </head>
 <body>
