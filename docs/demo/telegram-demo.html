@@ -1,34 +1,56 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>MargAI · Telegram demo</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>MargAI · teléfono</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.ph{width:390px;height:640px;background:#8DB58E;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.ph::before{content:"";position:absolute;inset:0;background:
- radial-gradient(circle at 20% 30%,rgba(255,255,255,.14) 0 2px,transparent 3px),
- radial-gradient(circle at 70% 60%,rgba(255,255,255,.12) 0 2px,transparent 3px),
- radial-gradient(circle at 40% 85%,rgba(255,255,255,.12) 0 2px,transparent 3px),
- radial-gradient(circle at 85% 15%,rgba(255,255,255,.12) 0 2px,transparent 3px),
- linear-gradient(160deg,#A7C9A3,#7EAE86 60%,#9CBF9B);background-size:120px 120px,160px 160px,140px 140px,180px 180px,100% 100%}
-.top{position:relative;z-index:1;background:#fff;height:58px;display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid #E6E6E6}
+*{box-sizing:border-box}body{margin:0;background:transparent;font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+/* ---- teléfono ---- */
+.phone{width:380px;height:780px;border-radius:54px;background:#111;padding:12px;position:relative;box-shadow:inset 0 0 0 2px #2b2b2b}
+.phone::before{content:"";position:absolute;left:-2px;top:150px;width:3px;height:34px;background:#222;border-radius:2px}
+.phone::after{content:"";position:absolute;right:-2px;top:190px;width:3px;height:70px;background:#222;border-radius:2px}
+.screen{width:100%;height:100%;border-radius:42px;overflow:hidden;position:relative;display:flex;flex-direction:column;background:#7FAF88}
+.screen::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 18% 28%,rgba(255,255,255,.16) 0 2px,transparent 3px),
+ radial-gradient(circle at 72% 58%,rgba(255,255,255,.13) 0 2px,transparent 3px),
+ radial-gradient(circle at 38% 84%,rgba(255,255,255,.13) 0 2px,transparent 3px),
+ radial-gradient(circle at 86% 14%,rgba(255,255,255,.13) 0 2px,transparent 3px),
+ linear-gradient(165deg,#A9CBA4,#7EAE86 55%,#9BBE9A);background-size:120px 120px,160px 160px,140px 140px,180px 180px,100% 100%}
+.island{position:absolute;left:50%;top:10px;transform:translateX(-50%);width:112px;height:32px;border-radius:20px;background:#111;z-index:3}
+/* status bar */
+.status{position:relative;z-index:2;height:52px;background:#fff;display:flex;align-items:flex-end;justify-content:space-between;padding:0 26px 6px;font-size:14px;font-weight:600;color:#111}
+.status .r{display:flex;align-items:center;gap:6px}
+.sig{display:inline-flex;align-items:flex-end;gap:2px;height:11px}.sig i{width:3px;background:#111;border-radius:1px}
+.bat{width:25px;height:12px;border:1.5px solid #111;border-radius:4px;position:relative}.bat::after{content:"";position:absolute;inset:2px;right:4px;background:#111;border-radius:1.5px}.bat::before{content:"";position:absolute;right:-4px;top:3px;width:2px;height:5px;background:#111;border-radius:1px}
+/* telegram header */
+.top{position:relative;z-index:2;background:#fff;height:56px;display:flex;align-items:center;gap:10px;padding:0 12px 0 10px;border-bottom:1px solid #E3E3E3}
+.back{color:#3B8AD8;font-size:22px;line-height:1;margin-right:2px}
 .av{width:38px;height:38px;border-radius:50%;background:#2F7A58;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:16px}
 .top b{display:block;font-size:15px;color:#111}.top small{display:block;font-size:12px;color:#7A7A7A}
-.top .ic{margin-left:auto;display:flex;gap:16px;color:#3B8AD8;font-size:18px}
-.msgs{position:relative;z-index:1;padding:12px 10px 10px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;line-height:1.38;color:#111}
-.m{max-width:82%;padding:7px 10px 7px 10px;border-radius:12px;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative}
+.top .ic{margin-left:auto;display:flex;gap:18px;color:#3B8AD8;font-size:18px;align-items:center}
+.top .ic svg{width:20px;height:20px;stroke:#3B8AD8;fill:none;stroke-width:2;stroke-linecap:round}
+/* messages */
+.msgs{position:relative;z-index:1;flex:1;padding:12px 10px 8px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;line-height:1.38;color:#111;overflow:hidden}
+.m{max-width:82%;padding:7px 10px;border-radius:14px;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative}
 .m.out{align-self:flex-end;background:#EFFDDE;border-bottom-right-radius:4px}
 .m.in{align-self:flex-start;border-bottom-left-radius:4px}
-.m .t{display:block;text-align:right;font-size:10.5px;color:#7A9A7A;margin:2px -2px -2px 0}
-.m.in .t{color:#9A9A9A}
-.m .t .ck{color:#4FAE4E}
+.m .t{display:block;text-align:right;font-size:10.5px;color:#7A9A7A;margin:2px -2px -2px 0}.m.in .t{color:#9A9A9A}.m .t .ck{color:#4FAE4E}
 .m b{font-weight:600}
-</style></head><body><div class="ph">
-<div class="top"><div class="av">M</div><div><b>MargAI</b><small>bot</small></div><div class="ic"><span>&#9906;</span><span>&middot;&middot;&middot;</span></div></div>
+.day{align-self:center;background:rgba(0,0,0,.18);color:#fff;font-size:11px;padding:3px 10px;border-radius:999px}
+/* input bar */
+.inp{position:relative;z-index:2;background:#fff;height:58px;display:flex;align-items:center;gap:10px;padding:0 12px;border-top:1px solid #E3E3E3}
+.inp .field{flex:1;height:38px;border-radius:19px;background:#F2F2F2;display:flex;align-items:center;padding:0 14px;color:#9A9A9A;font-size:14px}
+.inp svg{width:22px;height:22px;stroke:#8A8A8A;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.home{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:120px;height:5px;border-radius:3px;background:#111;z-index:3;opacity:.85}
+</style></head><body>
+<div class="phone" id="phone"><div class="screen">
+<div class="island"></div>
+<div class="status"><span>10:15</span><span class="r"><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:11px"></i></span><span style="font-size:12px">5G</span><span class="bat"></span></span></div>
+<div class="top"><span class="back">‹</span><div class="av">M</div><div><b>MargAI</b><small>bot</small></div><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.2" fill="#3B8AD8"/><circle cx="12" cy="12" r="1.2" fill="#3B8AD8"/><circle cx="12" cy="19" r="1.2" fill="#3B8AD8"/></svg></div></div>
 <div class="msgs">
 <div class="m out">¿Cómo vienen las ventas de la sucursal Norte esta semana?<span class="t">10:12 <span class="ck">✓✓</span></span></div>
 <div class="m in">Dame unos segundos, estoy buscando los datos…<span class="t">10:12</span></div>
 <div class="m in"><b>Norte, del 15 al 21 de septiembre de 2026, vendió $ 710.450 netos</b>, un 12,0 % menos que la semana anterior. La baja se concentra en jueves y viernes; el resto de los días estuvo en línea.<span class="t">10:13</span></div>
 <div class="m out">¿Y por qué bajó?<span class="t">10:14 <span class="ck">✓✓</span></span></div>
-<div class="m in">Dame unos segundos, estoy buscando los datos…<span class="t">10:14</span></div>
 <div class="m in"><b>Menos operaciones, no tickets más chicos:</b> operaciones −14 %, ticket promedio +2 %.<br><b>Bebidas cayó 31 %:</b> el quiebre de stock del jueves 18 coincide con el inicio de la baja.<br><b>Es de la sucursal, no del negocio:</b> Centro y Sur crecieron 11 % y 9 % en la misma semana.<span class="t">10:15</span></div>
-<div class="m out">Mandame el resumen por mail<span class="t">10:15 <span class="ck">✓✓</span></span></div>
-<div class="m in">Listo, te envié el resumen semanal de Norte por correo.<span class="t">10:15</span></div>
-</div></div></body></html>
+</div>
+<div class="inp"><svg viewBox="0 0 24 24"><path d="M21 12l-9 9a6 6 0 0 1-8.5-8.5l9-9a4 4 0 0 1 5.7 5.7l-9 9a2 2 0 0 1-2.8-2.8l8-8"/></svg><div class="field">Mensaje</div><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+<div class="home"></div>
+</div></div>
+</body></html>
