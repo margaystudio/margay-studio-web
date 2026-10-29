@@ -1,72 +1,80 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Viñetas sistemas</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Ilustraciones sistemas</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#0E1A14;-webkit-font-smoothing:antialiased}
-.v{width:580px;height:400px;padding:34px;background:#F6F8F5;display:flex;flex-direction:column;overflow:hidden}
-.mono{font-family:"JetBrains Mono","DejaVu Sans Mono",monospace;font-size:13px;letter-spacing:.06em;color:#8A978F;text-transform:uppercase}
-.card{background:#fff;border:1px solid rgba(14,26,20,.10);border-radius:14px;box-shadow:0 8px 22px rgba(14,26,20,.06)}
-.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap}
-.g{background:#E3F3E9;color:#1D5735}.y{background:#FFF2D9;color:#96651A}.n{background:#EEF0EE;color:#5C6B62}
-.arrow{color:#B5BFB9;font-size:26px;line-height:1}
-/* 1 kanban */
-.kb{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:1;margin-top:18px}
-.col{display:flex;flex-direction:column;gap:12px}
-.col h4{margin:0;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
-.kcard{padding:16px;display:flex;flex-direction:column;gap:10px}
-.kcard b{font-size:16px;font-weight:600;line-height:1.2}.kcard span{font-size:14px;color:#5C6B62}
-.kcard.win{border-color:#4FA377;background:#EEF7F1}
-.ghost{border:2px dashed rgba(14,26,20,.14);border-radius:14px;height:64px}
-/* 2 match */
-.match{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;flex:1;margin-top:18px}
-.doc{padding:22px 20px;display:flex;flex-direction:column;gap:6px;position:relative}
-.doc::before{content:"";position:absolute;left:20px;right:20px;top:14px;height:3px;border-radius:2px;background:#DCE3DE}
-.doc small{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8A978F;margin-top:10px}
-.doc b{font-size:28px;font-weight:600;letter-spacing:-.02em}
-.doc span{font-size:14px;color:#5C6B62}
-.ok{display:flex;flex-direction:column;align-items:center;gap:6px;color:#1D5735;font-size:13px;font-weight:600}
-.ok i{width:44px;height:44px;border-radius:50%;background:#7CC39C;color:#0E1A14;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:22px;font-weight:700}
-.pay{margin-top:18px;display:flex;align-items:center;justify-content:space-between}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 22px;border-radius:10px;background:#7CC39C;color:#0E1A14;font-weight:600;font-size:16px}
-/* 3 queue */
-.q{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:end;flex:1;margin-top:18px;padding-bottom:10px}
-.stack{position:relative;height:120px}
-.stack .t{position:absolute;left:0;right:0;height:58px;background:#fff;border:1px solid rgba(14,26,20,.12);border-radius:10px;box-shadow:0 6px 16px rgba(14,26,20,.06);display:flex;align-items:center;gap:10px;padding:0 14px;font-size:14px;font-weight:600}
-.stack .t::before{content:"";width:10px;height:10px;border-radius:50%;background:#B5BFB9}
-.stack.p .t::before{background:#E0A93B}.stack.r .t::before{background:#2F7A58}
-.lbl{text-align:center;margin-top:12px;font-size:14px;color:#5C6B62}.lbl b{display:block;font-size:26px;color:#0E1A14;font-weight:600;letter-spacing:-.02em}
-.qa{align-self:end;padding-bottom:84px}
+*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.v{width:344px;height:200px;background:#F6F8F5;overflow:hidden}
+.v svg{display:block;width:344px;height:200px}
+text{font-family:Inter,"Helvetica Neue",Arial,sans-serif}
 </style></head><body>
 
-<!-- 1 · COMERCIAL -->
-<div class="v" id="v1">
-<span class="mono">Oportunidades</span>
-<div class="kb">
-<div class="col"><h4>Nueva</h4><div class="card kcard"><b>Transportes Barrios</b><span>$ 70.000</span></div><div class="ghost"></div></div>
-<div class="col"><h4>En curso</h4><div class="card kcard"><b>Estancia Costa</b><span>Propuesta enviada</span></div><div class="ghost"></div></div>
-<div class="col"><h4>Ganada</h4><div class="card kcard win"><b>Flota del Este</b><span class="chip g" style="align-self:flex-start">✓ $ 4,0 M</span></div><div class="ghost"></div></div>
-</div>
-</div>
+<!-- 1 · COMERCIAL: una oportunidad recorre las etapas hasta "Ganada" -->
+<div class="v" id="v1"><svg viewBox="0 0 344 200" fill="none">
+<path d="M56 92 H284" stroke="#7CC39C" stroke-width="3" stroke-linecap="round"/>
+<circle cx="56" cy="92" r="9" fill="#7CC39C"/><circle cx="132" cy="92" r="9" fill="#7CC39C"/><circle cx="208" cy="92" r="9" fill="#7CC39C"/>
+<g transform="translate(254 56)">
+<rect x="0" y="0" width="60" height="70" rx="10" fill="#fff" stroke="#0E1A14" stroke-width="2.5"/>
+<rect x="12" y="14" width="36" height="5" rx="2.5" fill="#0E1A14"/>
+<rect x="12" y="26" width="24" height="5" rx="2.5" fill="#C9D3CC"/>
+<text x="12" y="58" font-size="13" font-weight="600" fill="#0E1A14">$</text>
+<circle cx="46" cy="53" r="11" fill="#7CC39C"/><path d="M41 53l3.5 3.5L51.5 49" stroke="#0E1A14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="56" y="128" text-anchor="middle" font-size="12" fill="#5C6B62">Nueva</text>
+<text x="132" y="128" text-anchor="middle" font-size="12" fill="#5C6B62">Contacto</text>
+<text x="208" y="128" text-anchor="middle" font-size="12" fill="#5C6B62">Propuesta</text>
+<text x="284" y="146" text-anchor="middle" font-size="12" font-weight="600" fill="#0E1A14">Ganada</text>
+<text x="172" y="182" text-anchor="middle" font-size="13" font-weight="600" fill="#0E1A14">Cada oportunidad, etapa por etapa</text>
+</svg></div>
 
-<!-- 2 · ADMINISTRACIÓN -->
-<div class="v" id="v2">
-<span class="mono">Compras y pagos</span>
-<div class="match">
-<div class="card doc"><small>Orden de compra</small><b>$ 412.300</b><span>Distribuidora Norte</span></div>
-<div class="ok"><i>✓</i>Coincide</div>
-<div class="card doc"><small>Factura</small><b>$ 412.300</b><span>A-0001-23418</span></div>
-</div>
-<div class="pay"><span class="chip y">Aprobada por Gerencia</span><span class="btn">Pagar</span></div>
-</div>
+<!-- 2 · COMPRAS Y PAGOS: la orden y la factura encajan -->
+<div class="v" id="v2"><svg viewBox="0 0 344 200" fill="none">
+<!-- order document -->
+<g transform="translate(70 40)">
+<path d="M0 10a10 10 0 0 1 10-10h58l22 22v88a10 10 0 0 1-10 10H10A10 10 0 0 1 0 110z" fill="#fff" stroke="#0E1A14" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M68 0v22h22" stroke="#0E1A14" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="14" y="40" width="44" height="5" rx="2.5" fill="#C9D3CC"/><rect x="14" y="52" width="60" height="5" rx="2.5" fill="#C9D3CC"/>
+<text x="14" y="92" font-size="15" font-weight="600" fill="#0E1A14">$ 412.300</text>
+<text x="14" y="30" font-size="11" fill="#5C6B62">Orden</text>
+</g>
+<!-- invoice document -->
+<g transform="translate(184 40)">
+<path d="M0 10a10 10 0 0 1 10-10h58l22 22v88a10 10 0 0 1-10 10H10A10 10 0 0 1 0 110z" fill="#fff" stroke="#0E1A14" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M68 0v22h22" stroke="#0E1A14" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="14" y="40" width="44" height="5" rx="2.5" fill="#C9D3CC"/><rect x="14" y="52" width="60" height="5" rx="2.5" fill="#C9D3CC"/>
+<text x="14" y="92" font-size="15" font-weight="600" fill="#0E1A14">$ 412.300</text>
+<text x="14" y="30" font-size="11" fill="#5C6B62">Factura</text>
+</g>
+<!-- the match -->
+<circle cx="172" cy="104" r="20" fill="#7CC39C" stroke="#F6F8F5" stroke-width="5"/>
+<path d="M163 104l6 6 12-12" stroke="#0E1A14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="172" y="182" text-anchor="middle" font-size="13" font-weight="600" fill="#0E1A14">Coinciden: se paga</text>
+</svg></div>
 
-<!-- 3 · OPERACIÓN -->
-<div class="v" id="v3">
-<span class="mono">Pedidos de hoy</span>
-<div class="q">
-<div><div class="stack"><div class="t" style="top:30px;left:14px;right:14px;opacity:.35"></div><div class="t" style="top:46px;left:7px;right:7px;opacity:.6"></div><div class="t" style="top:62px">Estación Centro</div></div><div class="lbl"><b>6</b>Recibidos</div></div>
-<div class="arrow qa">→</div>
-<div><div class="stack p"><div class="t" style="top:46px;left:7px;right:7px;opacity:.6"></div><div class="t" style="top:62px">Estación Costa</div></div><div class="lbl"><b>4</b>En producción</div></div>
-<div class="arrow qa">→</div>
-<div><div class="stack r"><div class="t" style="top:62px">Estación Ruta 5</div></div><div class="lbl"><b>3</b>Listos para salir</div></div>
-</div>
-</div>
+<!-- 3 · PEDIDOS Y PRODUCCIÓN: del pedido a la entrega -->
+<div class="v" id="v3"><svg viewBox="0 0 344 200" fill="none">
+<!-- conveyor -->
+<path d="M30 118 H314" stroke="#C9D3CC" stroke-width="3" stroke-linecap="round"/>
+<circle cx="60" cy="118" r="4" fill="#C9D3CC"/><circle cx="110" cy="118" r="4" fill="#C9D3CC"/><circle cx="160" cy="118" r="4" fill="#C9D3CC"/><circle cx="210" cy="118" r="4" fill="#C9D3CC"/><circle cx="260" cy="118" r="4" fill="#C9D3CC"/>
+<!-- station 1: pedido (ticket) -->
+<g transform="translate(40 58)">
+<path d="M0 6a6 6 0 0 1 6-6h36a6 6 0 0 1 6 6v14a6 6 0 0 0 0 12v14a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V32a6 6 0 0 0 0-12z" fill="#fff" stroke="#0E1A14" stroke-width="2.5"/>
+<rect x="11" y="14" width="26" height="4" rx="2" fill="#0E1A14"/><rect x="11" y="24" width="18" height="4" rx="2" fill="#C9D3CC"/><rect x="11" y="34" width="22" height="4" rx="2" fill="#C9D3CC"/>
+</g>
+<!-- station 2: producción (horno) -->
+<g transform="translate(142 50)">
+<rect x="0" y="0" width="60" height="60" rx="10" fill="#F6CEA8" stroke="#0E1A14" stroke-width="2.5"/>
+<rect x="10" y="18" width="40" height="30" rx="5" fill="#fff" stroke="#0E1A14" stroke-width="2.5"/>
+<circle cx="14" cy="9" r="2.5" fill="#0E1A14"/><circle cx="24" cy="9" r="2.5" fill="#0E1A14"/><circle cx="34" cy="9" r="2.5" fill="#0E1A14"/>
+<path d="M22 30c0-5 4-5 4-9M30 30c0-5 4-5 4-9M38 30c0-5 4-5 4-9" stroke="#0E1A14" stroke-width="2" stroke-linecap="round"/>
+</g>
+<!-- station 3: entrega (caja) -->
+<g transform="translate(246 56)">
+<path d="M0 18l30-14 30 14v30L30 62 0 48z" fill="#7CC39C" stroke="#0E1A14" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M0 18l30 14 30-14M30 32v30" stroke="#0E1A14" stroke-width="2.5" stroke-linejoin="round"/>
+</g>
+<!-- labels -->
+<text x="64" y="150" text-anchor="middle" font-size="12" fill="#5C6B62">Pedido</text>
+<text x="172" y="150" text-anchor="middle" font-size="12" fill="#5C6B62">Producción</text>
+<text x="276" y="150" text-anchor="middle" font-size="12" fill="#5C6B62">Entrega</text>
+<text x="172" y="182" text-anchor="middle" font-size="13" font-weight="600" fill="#0E1A14">Cada pedido, de punta a punta</text>
+</svg></div>
 
 </body></html>
