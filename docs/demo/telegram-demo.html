@@ -1,0 +1,34 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>MargAI · Telegram demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.ph{width:390px;height:640px;background:#8DB58E;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.ph::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 20% 30%,rgba(255,255,255,.14) 0 2px,transparent 3px),
+ radial-gradient(circle at 70% 60%,rgba(255,255,255,.12) 0 2px,transparent 3px),
+ radial-gradient(circle at 40% 85%,rgba(255,255,255,.12) 0 2px,transparent 3px),
+ radial-gradient(circle at 85% 15%,rgba(255,255,255,.12) 0 2px,transparent 3px),
+ linear-gradient(160deg,#A7C9A3,#7EAE86 60%,#9CBF9B);background-size:120px 120px,160px 160px,140px 140px,180px 180px,100% 100%}
+.top{position:relative;z-index:1;background:#fff;height:58px;display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid #E6E6E6}
+.av{width:38px;height:38px;border-radius:50%;background:#2F7A58;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:16px}
+.top b{display:block;font-size:15px;color:#111}.top small{display:block;font-size:12px;color:#7A7A7A}
+.top .ic{margin-left:auto;display:flex;gap:16px;color:#3B8AD8;font-size:18px}
+.msgs{position:relative;z-index:1;padding:12px 10px 10px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;line-height:1.38;color:#111}
+.m{max-width:82%;padding:7px 10px 7px 10px;border-radius:12px;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative}
+.m.out{align-self:flex-end;background:#EFFDDE;border-bottom-right-radius:4px}
+.m.in{align-self:flex-start;border-bottom-left-radius:4px}
+.m .t{display:block;text-align:right;font-size:10.5px;color:#7A9A7A;margin:2px -2px -2px 0}
+.m.in .t{color:#9A9A9A}
+.m .t .ck{color:#4FAE4E}
+.m b{font-weight:600}
+</style></head><body><div class="ph">
+<div class="top"><div class="av">M</div><div><b>MargAI</b><small>bot</small></div><div class="ic"><span>&#9906;</span><span>&middot;&middot;&middot;</span></div></div>
+<div class="msgs">
+<div class="m out">¿Cómo vienen las ventas de la sucursal Norte esta semana?<span class="t">10:12 <span class="ck">✓✓</span></span></div>
+<div class="m in">Dame unos segundos, estoy buscando los datos…<span class="t">10:12</span></div>
+<div class="m in"><b>Norte, del 15 al 21 de septiembre de 2026, vendió $ 710.450 netos</b>, un 12,0 % menos que la semana anterior. La baja se concentra en jueves y viernes; el resto de los días estuvo en línea.<span class="t">10:13</span></div>
+<div class="m out">¿Y por qué bajó?<span class="t">10:14 <span class="ck">✓✓</span></span></div>
+<div class="m in">Dame unos segundos, estoy buscando los datos…<span class="t">10:14</span></div>
+<div class="m in"><b>Menos operaciones, no tickets más chicos:</b> operaciones −14 %, ticket promedio +2 %.<br><b>Bebidas cayó 31 %:</b> el quiebre de stock del jueves 18 coincide con el inicio de la baja.<br><b>Es de la sucursal, no del negocio:</b> Centro y Sur crecieron 11 % y 9 % en la misma semana.<span class="t">10:15</span></div>
+<div class="m out">Mandame el resumen por mail<span class="t">10:15 <span class="ck">✓✓</span></span></div>
+<div class="m in">Listo, te envié el resumen semanal de Norte por correo.<span class="t">10:15</span></div>
+</div></div></body></html>

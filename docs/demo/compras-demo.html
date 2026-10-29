@@ -1,0 +1,49 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Compras y Pagos · demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;background:#F2F2F2;color:#111}
+.app{width:556px;min-height:745px;background:#F2F2F2;position:relative}
+.hd{background:#37393A;color:#fff;height:46px;display:flex;align-items:center;gap:10px;padding:0 12px}
+.logo{width:38px;height:26px;border-radius:5px;background:#fff;color:#37393A;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.hd b{font-size:15px}
+.sel{margin-left:auto;background:#fff;color:#111;border-radius:16px;padding:5px 12px;font-size:12px;font-weight:600}
+.q{width:24px;height:24px;border-radius:50%;background:#fff;color:#111;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.bar{height:3px;background:#7CC39C}
+.wrap{padding:10px 16px}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.06em;color:#555;margin:6px 0 6px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.k{background:#fff;border:1px solid #E1E1E1;border-radius:9px;padding:10px 11px;min-height:80px}
+.k small{display:block;font-size:11px;color:#555;line-height:1.3}
+.k b{display:block;font-size:20px;margin:6px 0 2px}.k b.r{color:#C8201F}
+.k em{font-style:normal;font-size:11px;color:#555}
+.list{background:#fff;border:1px solid #E1E1E1;border-radius:9px;overflow:hidden;margin-top:4px}
+.it{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #EAEAEA;font-size:12.5px}
+.it:last-child{border-bottom:0}
+.it b{display:block;font-size:12.5px}.it b.r{color:#C8201F}.it b.o{color:#C86A1F}
+.it small{display:block;color:#555;font-size:11.5px;margin-top:2px}
+.it span{color:#777}
+.ft{text-align:center;font-size:11px;color:#555;margin:14px 0}.ft a{color:#1B5CB8;text-decoration:none;font-weight:600}
+.nav{position:absolute;left:0;right:0;bottom:0;height:52px;background:#fff;border-top:1px solid #E1E1E1;display:flex;justify-content:space-around;align-items:center;font-size:10px;color:#555}
+.nav div{display:flex;flex-direction:column;align-items:center;gap:3px}.nav i{width:18px;height:14px;border:1.5px solid currentColor;border-radius:3px}.nav .on{color:#2F9E5B}
+</style></head><body><div class="app">
+<div class="hd"><div class="logo">CD</div><b>Compras y Pagos</b><div class="sel">Todas las empresas ▾</div><div class="q">?</div></div><div class="bar"></div>
+<div class="wrap">
+<div style="display:grid;grid-template-columns:3fr 1fr;gap:10px"><div class="lbl">PAGOS</div><div class="lbl">COMPRAS</div></div>
+<div class="kp">
+<div class="k"><small>Órdenes de pago a aprobar</small><b>3</b><em>$ 412.300</em></div>
+<div class="k"><small>Facturas vencidas</small><b class="r">12</b><em>$ 684.120</em></div>
+<div class="k"><small>Facturas que vencen esta semana</small><b>27</b><em>$ 1.138.400</em></div>
+<div class="k"><small>Órdenes de compra a aprobar</small><b>2</b><em>$ 96.500</em></div>
+</div>
+<div class="lbl" style="margin-top:16px">PENDIENTES</div>
+<div class="list">
+<div class="it"><div><b class="r">8 facturas contado sin pago registrado</b><small>$ 214.600 · cargá el comprobante</small></div><span>›</span></div>
+<div class="it"><div><b>11 órdenes para conciliar</b><small>estados de cuenta del proveedor y del estudio, antes de que las apruebe Gerencia</small></div><span>›</span></div>
+<div class="it"><div><b>5 órdenes listas para pagar</b><small>$ 538.900</small></div><span>›</span></div>
+<div class="it"><div><b class="o">9 facturas a revisar</b><small>sin condición de pago, importe distinto u otros</small></div><span>›</span></div>
+<div class="it"><div><b class="r">4 diferencias con DGI</b><small>lo cargado no coincide con el archivo de DGI</small></div><span>›</span></div>
+<div class="it"><div><b>31 pagos sin recibo</b><small>falta el recibo del proveedor</small></div><span>›</span></div>
+</div>
+<div class="ft">Última importación: 28/10/26 · DGI · Transportes · 2 facturas nuevas · <a>ver detalle</a></div>
+</div>
+<div class="nav"><div class="on"><i></i>Inicio</div><div><i></i>Pagos</div><div><i></i>Facturas</div><div><i></i>Compras</div><div><i></i>Más</div></div>
+</div></body></html>
