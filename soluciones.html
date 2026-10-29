@@ -229,8 +229,6 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </div>
-
-</div>
 <script>
 (function(){var tabs=Array.from(document.querySelectorAll('[data-md-tab]'));tabs.forEach(function(btn,i){btn.addEventListener('click',function(){select(btn)});btn.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();var next=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(next);next.focus()})});function select(btn){tabs.forEach(function(t){var on=t===btn;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById('md-pane-'+t.dataset.mdTab).hidden=!on})}})();
 </script>
