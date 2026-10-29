@@ -6,6 +6,7 @@
 <meta name="google-site-verification" content="0vFZj8nfzUEtRjjWR2kuX_NbeEoUnrh8DDg95MjU9Qs"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Soluciones | Margay Studio</title>
+<meta name="description" content="Ombú (plataforma de datos), Arrayán (plataforma de conocimiento) y sistemas a medida que ya funcionan en empresas y organismos públicos. Todo se adapta a tu negocio.">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -25,10 +26,6 @@ a{color:#0E1A14;text-decoration:none}a:hover{color:#2F6B4A}
 .mq:hover .mq-track{animation-play-state:paused}
 @media (prefers-reduced-motion: reduce){.mq-track{animation:none}}
 html{scroll-behavior:smooth}
-/* preloader */
-.pre{position:fixed;inset:0;z-index:50;background:#0E1A14;color:#EEF7F1;display:flex;align-items:flex-end;justify-content:space-between;padding:32px 40px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.015em;transition:transform .9s cubic-bezier(.76,0,.24,1)}
-.pre .n{font-family:'Inter',sans-serif;font-weight:500;font-size:96px;line-height:.9;letter-spacing:-.03em}
-.done .pre{transform:translateY(-100%)}
 /* hero load */
 .hl .w{display:inline-block;transform:translateY(110%);transition:transform 1s cubic-bezier(.19,1,.22,1)}
 .hl{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em;margin-bottom:-.06em}
@@ -61,7 +58,7 @@ html{scroll-behavior:smooth}
 .core{animation:breathe 3s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(124,195,156,.0)}50%{box-shadow:0 0 0 14px rgba(124,195,156,.16)}}
 @media (prefers-reduced-motion: reduce){
-.pre{display:none}.hl .w,.fu,.shot,.bar,.js [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+.hl .w,.fu,.shot,.bar,.js [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 .flow .dot,.core,.card,.btn{animation:none!important;transition:none!important}}
 
 .net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
@@ -77,7 +74,6 @@ html{scroll-behavior:smooth}
   .h1{font-size:60px!important}
 }
 @media (max-width: 760px){
-  .pre{padding:20px}.pre .n{font-size:64px}
   header nav[aria-label="Principal"]{display:none!important}
   header a.btn[href^="mailto"]{display:none!important}
   header > div{height:60px!important;padding:0 16px!important}
@@ -120,6 +116,8 @@ html{scroll-behavior:smooth}
   .sol .thumb{display:none!important}
   .sol.open .thumb{display:flex!important;margin:0 16px 0!important}
   .sol.open .thumb.g3{display:grid!important}
+  .sol .sol-desc{display:none!important}
+  .sol.open .sol-desc{display:block!important;margin-top:6px!important}
   .sol > div:last-child{padding:16px 18px!important;gap:4px!important;cursor:pointer}
   .sol .sol-head h3{font-size:18px!important}
   .sol .sol-chev{display:block!important;transition:transform .3s ease}
@@ -137,7 +135,6 @@ html{scroll-behavior:smooth}
 </head>
 <body>
 <div id="page" style="width: 100%; font-family: 'Inter', system-ui, sans-serif; color: #0E1A14; background: #FFFFFF; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased">
-<div aria-hidden="true" class="pre"><span>MARGAY STUDIO</span><span class="n"><span id="cnt">0</span></span><span>CARGANDO</span></div>
 <canvas aria-hidden="true" class="net-fixed" id="net-page"></canvas>
 <!-- NAV -->
 <header class="sec" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(14,26,20,0.10)">
@@ -158,13 +155,153 @@ html{scroll-behavior:smooth}
 </div>
 </header>
 <!-- HERO SOLUCIONES -->
-<section class="sec" style="background:#EEF7F1"><div class="wrap" style="max-width:1200px;margin:auto;padding:76px 24px 52px"><span style="font:500 13px 'JetBrains Mono',monospace;color:#5C6B62">SOLUCIONES MARGAY</span><h1 class="h1" style="font-size:clamp(42px,5vw,64px);line-height:1.08;font-weight:500;letter-spacing:-.025em;margin:18px 0">Tecnología que ya está resolviendo problemas reales.</h1><p style="max-width:650px;font-size:19px;line-height:1.5;color:#5C6B62;margin:0">Conocé nuestras plataformas y otros sistemas que podemos adaptar a tu empresa.</p></div></section>
-<!-- CATÁLOGO --><section class="sec" style="background:#fff"><div style="max-width:1200px;margin:auto;padding:65px 24px 80px"><p style="font:500 12px 'JetBrains Mono',monospace;color:#568267">NUESTRAS PLATAFORMAS</p><h2 style="font-size:clamp(30px,4vw,46px);font-weight:500;margin:12px 0 30px">Explorá nuestras plataformas.</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px"><a href="plataforma-datos.html" style="text-decoration:none;color:#15261C;display:flex;flex-direction:column;background:#F4F8F5;border:1px solid #D9E9DD;border-radius:14px;overflow:hidden;transition:transform .2s"><div style="height:170px;background:radial-gradient(circle at 75% 20%,#A8DABC,#DDEFE3 55%,#EDF6EF);display:flex;align-items:center;justify-content:center;font-size:62px;color:#286E45">📊</div><div style="padding:26px"><span style="font:500 12px 'JetBrains Mono',monospace;color:#568267">Plataforma de datos</span><h3 style="font-size:27px;font-weight:500;margin:12px 0">Una sola versión de tu negocio.</h3><p style="font-size:15px;line-height:1.55;color:#5C6B62;min-height:50px">Tableros, alertas y consultas para trabajar mejor con la información de tu empresa.</p><span style="color:#2B8551;font-weight:600;font-size:14px">Conocer más →</span></div></a><a href="plataforma-conocimiento.html" style="text-decoration:none;color:#15261C;display:flex;flex-direction:column;background:#F4F8F5;border:1px solid #D9E9DD;border-radius:14px;overflow:hidden;transition:transform .2s"><div style="height:170px;background:radial-gradient(circle at 75% 20%,#A8DABC,#DDEFE3 55%,#EDF6EF);display:flex;align-items:center;justify-content:center;font-size:62px;color:#286E45">◈</div><div style="padding:26px"><span style="font:500 12px 'JetBrains Mono',monospace;color:#568267">Plataforma de conocimiento</span><h3 style="font-size:27px;font-weight:500;margin:12px 0">Todo el conocimiento de tu empresa. Conectado.</h3><p style="font-size:15px;line-height:1.55;color:#5C6B62;min-height:50px">Procesos, documentos y respuestas con Tyto.</p><span style="color:#2B8551;font-weight:600;font-size:14px">Conocer más →</span></div></a></div></div></section><!-- SOLUCIONES -->
-<section class="sec" id="otras-soluciones" style="background: #FFFFFF">
+<section class="sec" id="inicio" style="background:#EEF7F1"><div class="wrap" style="max-width:1200px;margin:auto;padding:76px 24px 56px;box-sizing:border-box"><span style="font:500 13px 'JetBrains Mono',monospace;color:#5C6B62">SOLUCIONES MARGAY</span><h1 class="h1" style="font-size:clamp(42px,5vw,64px);line-height:1.08;font-weight:500;letter-spacing:-.025em;margin:18px 0">Tecnología que ya está resolviendo problemas reales.</h1><p style="max-width:680px;font-size:19px;line-height:1.5;color:#5C6B62;margin:0 0 28px">Dos plataformas propias y sistemas a medida que ya funcionan en empresas y organismos públicos. Todo se adapta a tu negocio.</p>
+<nav aria-label="Secciones de esta página" style="display:flex;flex-wrap:wrap;gap:8px"><a href="#ombu" style="padding:9px 14px;border:1px solid #4FA377;border-radius:6px;font-size:14px;font-weight:500;color:#1D5735;text-decoration:none">Ombú · Datos</a><a href="#arrayan" style="padding:9px 14px;border:1px solid #4FA377;border-radius:6px;font-size:14px;font-weight:500;color:#1D5735;text-decoration:none">Arrayán · Conocimiento</a><a href="#sistemas" style="padding:9px 14px;border:1px solid #4FA377;border-radius:6px;font-size:14px;font-weight:500;color:#1D5735;text-decoration:none">Sistemas a medida</a></nav></div></section>
+<!-- OMBÚ -->
+<section class="sec" id="ombu" style="background:#fff"><div class="wrap" style="max-width:1200px;margin:auto;padding:80px 24px 64px;box-sizing:border-box"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">OMBÚ · PLATAFORMA DE DATOS</span><h2 class="h2" data-reveal="" style="margin:0;font-weight:500;font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.02em;max-width:760px;margin-top:14px">Tenés los datos. Lo difícil es verlos juntos.</h2><p style="margin:0;max-width:640px;font-size:18px;line-height:1.5;color:#5C6B62;margin-top:16px">Cuando la información está repartida entre sistemas, planillas y sucursales, entender qué está pasando lleva más tiempo del que debería.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:32px"><article data-reveal="" data-d="1" style="padding:22px 24px;background:#fff;border:1px solid #DFEAE1;border-radius:10px;display:flex;flex-direction:column;gap:8px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">01</span><h3 style="margin:0;font-weight:500;font-size:20px;line-height:1.15">Muchas fuentes, ninguna visión completa</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5C6B62">Ventas, operaciones y otros indicadores viven en lugares distintos y nadie los ve juntos.</p></article><article data-reveal="" data-d="2" style="padding:22px 24px;background:#fff;border:1px solid #DFEAE1;border-radius:10px;display:flex;flex-direction:column;gap:8px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">02</span><h3 style="margin:0;font-weight:500;font-size:20px;line-height:1.15">Reportes que llevan horas</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5C6B62">Tu equipo dedica tiempo a juntar información en vez de analizarla.</p></article><article data-reveal="" data-d="3" style="padding:22px 24px;background:#fff;border:1px solid #DFEAE1;border-radius:10px;display:flex;flex-direction:column;gap:8px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">03</span><h3 style="margin:0;font-weight:500;font-size:20px;line-height:1.15">Decisiones con información atrasada</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5C6B62">Cuando llega el reporte, la oportunidad de actuar puede haber pasado.</p></article></div>
+</div></section>
+<section class="sec" id="ombu-demo" style="background:#15261C;color:#fff;position:relative;overflow:hidden">
+<canvas aria-hidden="true" class="net" id="net-dark"></canvas>
+<style>
+.md-layout{position:relative;z-index:1;max-width:1200px;margin:auto;padding:68px 24px;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:38px;align-items:center}
+.md-demo{background:#F8FAF8;color:#1C3023;border:1px solid #D8E8DD;border-radius:15px;overflow:hidden;box-shadow:0 24px 65px #06150c50;font-family:'Plus Jakarta Sans',sans-serif}
+.md-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:1px solid #DFEAE1;font-size:12px;font-weight:700}
+.md-dot{width:7px;height:7px;border-radius:50%;background:#7CC39C;display:inline-block;margin-right:6px}
+.md-tabs{display:flex;gap:4px;padding:10px 12px;background:#EDF3EE}
+.md-tabs button{flex:1;border:0;background:transparent;border-radius:7px;padding:10px 4px;font:600 11px 'Plus Jakarta Sans',sans-serif;color:#55705E;cursor:pointer;transition:background .2s}
+.md-tabs button[aria-selected="true"]{background:#fff;color:#1D5735;box-shadow:0 2px 8px #15341d24;outline:2px solid #7CC39C;outline-offset:-2px}
+.md-tabs button:hover{background:#D7EADD;color:#174B2C}
+.md-tabs button:focus-visible,.md-bars button:focus-visible{outline:3px solid #4FA377;outline-offset:2px}
+.md-bars button{display:block;flex:1;align-self:end;border:0;padding:0;border-radius:4px 4px 0 0;background:linear-gradient(#7CC39C,#3B9466);min-height:8px;cursor:pointer;transition:filter .2s,transform .2s}
+.md-bars button:hover,.md-bars button[aria-pressed="true"]{filter:brightness(.9);transform:scaleX(1.07)}
+.md-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.md-controls select{border:1px solid #C7DACD;border-radius:7px;background:#fff;color:#24553A;font:600 11px 'Plus Jakarta Sans',sans-serif;padding:7px 10px;cursor:pointer}
+.md-feedback{font-size:11px;color:#39734F;min-height:17px;margin-top:8px}
+.md-pane{padding:20px;min-height:300px;box-sizing:border-box}
+.md-pane[hidden]{display:none!important}
+.md-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:14px 0}
+.md-kpi{border:1px solid #E2EBE4;border-radius:9px;padding:11px;background:white}
+.md-kpi small{font-size:10px;color:#63766A;display:block}.md-kpi strong{display:block;font-size:clamp(16px,2vw,22px);margin:6px 0 2px}.md-kpi em{font-size:10px;color:#278451;font-style:normal}
+.md-bars{height:120px;display:flex;align-items:end;gap:9px;padding:15px 12px 8px;border:1px solid #E2EBE4;border-radius:9px;background:repeating-linear-gradient(to top,#fff 0,#fff 28px,#ECF1ED 29px)}
+.md-bars i{display:block;flex:1;border-radius:4px 4px 0 0;background:linear-gradient(#7CC39C,#3B9466);min-height:8px}
+.md-alert{border:1px solid #E1EAE3;border-radius:10px;padding:13px;background:#fff;margin-top:10px;display:flex;gap:12px;align-items:flex-start}
+.md-alert b{display:block;font-size:12px;margin-bottom:4px}.md-alert p{font-size:11px;line-height:1.5;color:#617467;margin:0}
+.md-badge{font-size:10px;border-radius:5px;padding:5px 7px;background:#FFF2D9;color:#96651A;white-space:nowrap}
+.md-question{background:#E8F3EC;border-radius:10px;padding:12px;font-size:12px;margin:15px 0 12px}
+.md-answer{background:#fff;border:1px solid #DDE9E0;border-radius:10px;padding:15px;font-size:12px;line-height:1.6}
+.md-answer strong{color:#286D46}.md-demo-note{font-size:10px;color:#6D8172;margin-top:12px}
+@media(max-width:900px){.md-layout{grid-template-columns:1fr;gap:26px}.md-pane{min-height:285px}}
+@media(max-width:460px){.md-layout{padding:52px 18px}.md-tabs button{font-size:10px}.md-pane{padding:13px;min-height:290px}.md-kpi{padding:8px}.md-kpi strong{font-size:16px}}
+</style>
+<div class="md-layout">
+<div data-reveal="" style="display:flex;flex-direction:column;gap:20px">
+<span style="font:500 13px 'JetBrains Mono',monospace;color:#B6D7C2">OMBÚ · PLATAFORMA DE DATOS</span>
+<h2 class="h2" style="margin:0;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.07;letter-spacing:-.02em;color:#EEF7F1">Una sola versión de tu negocio.</h2>
+<p style="margin:0;font-size:18px;line-height:1.5;color:#EEF7F1;opacity:.85">Conectamos los sistemas y planillas que ya usás, unificamos los datos y los convertimos en tableros, alertas e informes. Sin cambiar tus sistemas para empezar.</p>
+<p style="margin:0;font-size:13px;color:#B6D7C2">Y con IA para preguntarle a tus datos desde el celular, como se lo preguntarías a alguien del equipo. Las respuestas salen de tu información, no de internet.</p>
+</div>
+<div class="md-demo" data-reveal="" data-d="2" aria-label="Demostración interactiva de la plataforma de datos">
+<div class="md-top"><span><span class="md-dot"></span>Margay <span style="font-weight:400;color:#6E8475">/ Visión del negocio</span></span><span style="color:#668471;font-weight:500">Demo</span></div>
+<div class="md-tabs" role="tablist" aria-label="Explorar funciones de datos">
+<button type="button" role="tab" id="md-tab-tableros" aria-controls="md-pane-tableros" aria-selected="true" tabindex="0" data-md-tab="tableros">Tableros</button>
+<button type="button" role="tab" id="md-tab-alertas" aria-controls="md-pane-alertas" aria-selected="false" tabindex="-1" data-md-tab="alertas">Alertas</button>
+<button type="button" role="tab" id="md-tab-preguntas" aria-controls="md-pane-preguntas" aria-selected="false" tabindex="-1" data-md-tab="preguntas">Preguntale a tus datos</button>
+</div>
+<div class="md-pane" id="md-pane-tableros" role="tabpanel" aria-labelledby="md-tab-tableros">
+<div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><strong style="font-size:14px">Resumen de ventas</strong><span style="font-size:10px;color:#698070">Últimos 7 días · Todas las sucursales</span></div>
+<div class="md-controls"><label for="md-branch" style="font-size:11px;color:#587461">Sucursal:</label><select id="md-branch" aria-label="Filtrar sucursal"><option value="all">Todas las sucursales</option><option value="norte">Sucursal Norte</option><option value="centro">Sucursal Centro</option><option value="sur">Sucursal Sur</option></select></div>
+<div class="md-kpis"><div class="md-kpi"><small>Ventas</small><strong id="md-sales">$ 2,48 M</strong><em>↑ 8,2% vs. anterior</em></div><div class="md-kpi"><small>Operaciones</small><strong>4.812</strong><em>↑ 3,4%</em></div><div class="md-kpi"><small>Ticket promedio</small><strong>$ 516</strong><em>↑ 4,6%</em></div></div>
+<div style="font-size:11px;font-weight:700;margin:10px 0 7px">Evolución diaria</div>
+<div class="md-bars" role="group" aria-label="Ventas diarias; seleccioná un día"><button type="button" aria-label="Lunes" style="height:45%"></button><button type="button" aria-label="Martes" style="height:62%"></button><button type="button" aria-label="Miércoles" style="height:53%"></button><button type="button" aria-label="Jueves" style="height:78%"></button><button type="button" aria-label="Viernes" style="height:66%"></button><button type="button" aria-label="Sábado" style="height:94%"></button><button type="button" aria-label="Domingo" style="height:84%"></button></div><div class="md-feedback" id="md-feedback" aria-live="polite">Elegí una sucursal o seleccioná una barra para explorar los datos.</div>
+<div class="md-demo-note">Datos ficticios · Ejemplo ilustrativo</div>
+</div>
+<div class="md-pane" id="md-pane-alertas" role="tabpanel" aria-labelledby="md-tab-alertas" hidden>
+<strong style="font-size:14px">Lo que merece tu atención</strong>
+<div class="md-alert"><span class="md-badge">Atención</span><div><b>Caída de ventas · Sucursal Norte</b><p>Las ventas bajaron 12% respecto del promedio de los últimos 7 días.</p></div></div>
+<div class="md-alert"><span class="md-badge" style="background:#E7F3EA;color:#31734D">Seguimiento</span><div><b>Variación en ticket promedio</b><p>El ticket promedio subió 9% en Sucursal Centro.</p></div></div>
+<div class="md-alert"><span class="md-badge" style="background:#E7F3EA;color:#31734D">Reporte</span><div><b>Resumen semanal disponible</b><p>Los indicadores consolidados están listos para revisar.</p></div></div>
+<div class="md-demo-note">Alertas simuladas · Sin datos de clientes</div>
+</div>
+<div class="md-pane" id="md-pane-preguntas" role="tabpanel" aria-labelledby="md-tab-preguntas" hidden>
+<strong style="font-size:14px">Preguntale a tus datos</strong>
+<div class="md-question">¿Qué sucursales vendieron menos esta semana?</div>
+<div class="md-answer"><strong>Resumen del análisis</strong><br>En este ejemplo, 3 sucursales tuvieron ventas inferiores a la semana anterior.<div style="display:flex;flex-direction:column;gap:9px;margin-top:14px"><div style="font-size:11px">Sucursal Norte <span style="float:right">−12%</span><div style="height:7px;background:#F0E8E2;border-radius:4px;margin-top:4px"><div style="width:78%;height:100%;background:#D9A078;border-radius:4px"></div></div></div><div style="font-size:11px">Sucursal Este <span style="float:right">−7%</span><div style="height:7px;background:#F0E8E2;border-radius:4px;margin-top:4px"><div style="width:48%;height:100%;background:#D9A078;border-radius:4px"></div></div></div><div style="font-size:11px">Sucursal Sur <span style="float:right">−4%</span><div style="height:7px;background:#F0E8E2;border-radius:4px;margin-top:4px"><div style="width:30%;height:100%;background:#D9A078;border-radius:4px"></div></div></div></div></div>
+<div class="md-demo-note">Respuesta simulada · No es una consulta en vivo</div>
+</div>
+</div>
+</div>
+<script>
+(function(){var tabs=Array.from(document.querySelectorAll('[data-md-tab]'));tabs.forEach(function(btn,i){btn.addEventListener('click',function(){select(btn)});btn.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();var next=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(next);next.focus()})});function select(btn){tabs.forEach(function(t){var on=t===btn;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById('md-pane-'+t.dataset.mdTab).hidden=!on})}})();
+</script>
+<script>
+(function(){var sel=document.getElementById('md-branch'),sales=document.getElementById('md-sales'),feedback=document.getElementById('md-feedback'),bars=Array.from(document.querySelectorAll('.md-bars button'));if(!sel)return;var values={all:['$ 2,48 M',[45,62,53,78,66,94,84]],norte:['$ 710 mil',[36,50,44,69,57,74,62]],centro:['$ 960 mil',[54,69,60,82,75,95,89]],sur:['$ 810 mil',[43,56,48,73,61,88,78]]};sel.addEventListener('change',function(){var v=values[sel.value];sales.textContent=v[0];bars.forEach(function(b,i){b.style.height=v[1][i]+'%';b.setAttribute('aria-pressed','false')});feedback.textContent='Mostrando '+sel.options[sel.selectedIndex].text.toLowerCase()+' · datos de ejemplo.'});bars.forEach(function(b,i){b.addEventListener('click',function(){bars.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');feedback.textContent=b.getAttribute('aria-label')+': '+Math.round(values[sel.value][1][i]*1.12)+' mil en ventas (ejemplo).'})})})();
+</script>
+</section>
+<section class="sec" style="background:#fff"><div style="max-width:1100px;margin:auto;padding:70px 24px"><h2 style="font-size:clamp(28px,4vw,42px);font-weight:500">De tus sistemas a decisiones más claras.</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px"><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Conectamos</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Integramos la información que ya existe en tus sistemas, planillas y sucursales.</p></article><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Organizamos</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Unificamos los datos para que todos trabajen con los mismos indicadores.</p></article><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Hacemos visible</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Tableros, reportes y alertas que ayudan a detectar cambios.</p></article><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Podés preguntar</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Preguntás en tu idioma y la IA responde con tus datos: el gráfico, la explicación y, si querés, el informe listo para enviar.</p></article></div><p style="font-size:15px;line-height:1.6;color:#3D4F44;margin-top:28px;max-width:720px">Ombú ya funciona en empresas privadas y organismos públicos, y lo adaptamos a cada operación: los indicadores, las alertas y los informes son los de tu negocio, no los de un sistema genérico.</p><p style="font-size:13px;color:#6C7C70;margin-top:16px">Las pantallas anteriores son una demostración con datos ficticios.</p></div></section><!-- ARRAYÁN -->
+<section class="sec" id="arrayan" style="background:#EEF7F1"><div class="wrap" style="max-width:1200px;margin:auto;padding:80px 24px 64px;box-sizing:border-box"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">ARRAYÁN · PLATAFORMA DE CONOCIMIENTO</span><h2 class="h2" data-reveal="" style="margin:0;font-weight:500;font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.02em;max-width:820px;margin-top:14px">El conocimiento de tu empresa no debería depender de la memoria de las personas.</h2><p style="margin:0;max-width:640px;font-size:18px;line-height:1.5;color:#5C6B62;margin-top:16px">Los procedimientos existen, pero están en la cabeza de alguien, en un mail o en una carpeta que nadie abre.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:32px"><article data-reveal="" data-d="1" style="padding:22px 24px;background:#fff;border:1px solid #DFEAE1;border-radius:10px;display:flex;flex-direction:column;gap:8px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">01</span><h3 style="margin:0;font-weight:500;font-size:20px;line-height:1.15">Cuando alguien se va, se va el conocimiento</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5C6B62">Hay tareas que sabe hacer una sola persona, y nadie más.</p></article><article data-reveal="" data-d="2" style="padding:22px 24px;background:#fff;border:1px solid #DFEAE1;border-radius:10px;display:flex;flex-direction:column;gap:8px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">02</span><h3 style="margin:0;font-weight:500;font-size:20px;line-height:1.15">Cada sucursal lo hace distinto</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5C6B62">El mismo proceso se ejecuta de tres maneras, y ninguna está escrita.</p></article><article data-reveal="" data-d="3" style="padding:22px 24px;background:#fff;border:1px solid #DFEAE1;border-radius:10px;display:flex;flex-direction:column;gap:8px"><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#568267">03</span><h3 style="margin:0;font-weight:500;font-size:20px;line-height:1.15">Una auditoría es un trabajo enorme</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5C6B62">Juntar la documentación vigente, con versiones y responsables, lleva semanas.</p></article></div>
+</div></section>
+<section class="sec" id="arrayan-demo" style="background:#F6F8F5;color:#0E1A14;overflow:hidden">
+<style>
+.k-layout{max-width:1200px;margin:auto;padding:56px 24px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:32px;align-items:center}
+.k-label{font:500 12px 'JetBrains Mono',monospace;color:#568267;letter-spacing:.02em}
+.k-stage{position:relative;min-height:250px;border-radius:12px;border:1px solid #D8E7DD;background:radial-gradient(circle at 50% 48%,#E3F3E9,#fff 68%);overflow:hidden}
+.k-stage svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.k-stage path{stroke:#A3CDB1;stroke-width:1.7;fill:none;stroke-dasharray:5 7;animation:k-dash 15s linear infinite}
+@keyframes k-dash{to{stroke-dashoffset:-240}}
+.k-node{position:absolute;transform:translate(-50%,-50%);border:1px solid #C8DDCF;border-radius:9px;background:#fff;padding:8px 10px;box-shadow:0 8px 24px #123b2310;text-align:left;cursor:pointer;color:#0E1A14;min-width:108px;max-width:150px;transition:background .2s,border-color .2s,box-shadow .2s}
+.k-node:hover,.k-node[aria-pressed="true"]{border-color:#4FA377;background:#E5F5EB;box-shadow:0 9px 26px #123b2324}
+.k-node small{display:block;font:500 10px 'JetBrains Mono',monospace;color:#568267;margin-bottom:5px}
+.k-node span{font-size:12px;font-weight:500;line-height:1.2;display:block}
+.k-center{left:50%;top:49%;background:#D8F0E1;border:2px solid #7CC39C;min-width:145px;text-align:center;cursor:default}
+.k-center span{font-size:15px}
+.k-n1{left:21%;top:19%}.k-n2{left:79%;top:19%}.k-n3{left:19%;top:78%}.k-n4{left:80%;top:78%}
+.k-info{padding:10px 14px;background:#fff;border:1px solid #D8E7DD;border-radius:9px;min-height:57px;margin-top:8px;box-sizing:border-box}
+.k-tyto{margin-top:8px;border-radius:9px;padding:11px 14px;background:#E7F3EA;border:1px solid #D1E8D8}
+.k-tyto button{border:0;background:#fff;color:#27573C;padding:8px 10px;border-radius:6px;cursor:pointer;font-size:12px;text-align:left}
+.k-tyto button:hover{background:#D6EADD}
+@media(max-width:850px){.k-layout{grid-template-columns:1fr;gap:32px}.k-stage{min-height:260px}}
+@media(max-width:460px){.k-stage{min-height:260px}.k-node{min-width:85px;max-width:115px;padding:9px}.k-node span{font-size:11px}.k-center{min-width:125px}.k-center span{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.k-stage path{animation:none}}
+</style>
+<div class="k-layout">
+<div data-reveal="" style="display:flex;flex-direction:column;align-items:flex-start;gap:16px">
+<span class="k-label">ARRAYÁN · PLATAFORMA DE CONOCIMIENTO</span>
+<h2 class="h2" style="margin:0;font-weight:500;font-size:clamp(36px,4vw,48px);line-height:1.06;letter-spacing:-.02em">Lo que sabe tu empresa, <span style="color:#4FA377">documentado.</span></h2>
+<p style="margin:0;max-width:490px;font-size:17px;line-height:1.45;color:#5C6B62">Relevamos tus procesos y los convertimos en procedimientos claros, con versiones, responsables y aprobaciones. Tu equipo los consulta, o le pregunta a Tyto, nuestro asistente de IA, que responde solo con lo que tu empresa validó.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="padding:8px 11px;border:1px solid #D9E9DD;border-radius:6px;font-size:13px;color:#315D43">Relevamiento y documentación</span><span style="padding:8px 11px;border:1px solid #D9E9DD;border-radius:6px;font-size:13px;color:#315D43">Versiones y aprobaciones</span><span style="padding:8px 11px;border:1px solid #D9E9DD;border-radius:6px;font-size:13px;color:#315D43">Consultas con IA</span></div>
+</div>
+<div data-reveal="" data-d="2">
+<div class="k-stage" aria-label="Explorá las relaciones de un proceso de cierre de caja">
+<svg viewBox="0 0 500 390" preserveAspectRatio="none" aria-hidden="true"><path d="M250 191 L105 74 M250 191 L395 74 M250 191 L95 304 M250 191 L400 304"/></svg>
+<div class="k-node k-center"><small>PROCESO</small><span>Cierre de caja diario</span></div>
+<button class="k-node k-n1" type="button" data-k="instructivo" aria-pressed="true"><small>PROCEDIMIENTO</small><span>Instructivo de cierre</span></button>
+<button class="k-node k-n2" type="button" data-k="arqueo" aria-pressed="false"><small>DOCUMENTO</small><span>Planilla de arqueo</span></button>
+<button class="k-node k-n3" type="button" data-k="diferencias" aria-pressed="false"><small>POLÍTICA</small><span>Diferencias de caja</span></button>
+<button class="k-node k-n4" type="button" data-k="encargado" aria-pressed="false"><small>ROL</small><span>Encargado de sucursal</span></button>
+</div>
+<div class="k-info" aria-live="polite"><div class="k-label" id="k-detail-type">PROCEDIMIENTO RELACIONADO</div><div id="k-detail" style="font-size:13px;line-height:1.35;margin-top:4px">El instructivo reúne los pasos para realizar el cierre de caja diario.</div></div>
+<div class="k-tyto"><div style="font-size:14px;font-weight:500;margin-bottom:6px">Preguntale a Tyto <span style="font-weight:400;color:#5C6B62">· asistente de IA</span></div><div style="display:flex;flex-wrap:wrap;gap:7px"><button type="button" data-q="dif">¿Qué hago si hay una diferencia?</button><button type="button" data-q="resp">¿Quién aprueba el cierre?</button></div><div id="k-answer" aria-live="polite" style="font-size:12px;line-height:1.4;margin-top:6px;color:#315D43">Tyto te ayuda a encontrar respuestas a partir del conocimiento documentado.</div></div>
+</div>
+</div>
+<script>
+(function(){
+const root=document.getElementById('arrayan-demo');if(!root)return;
+const details={instructivo:['PROCEDIMIENTO RELACIONADO','El instructivo reúne los pasos para realizar el cierre de caja diario.'],arqueo:['DOCUMENTO RELACIONADO','La planilla de arqueo permite registrar y contrastar los importes del cierre.'],diferencias:['POLÍTICA RELACIONADA','La política indica cómo registrar, revisar y escalar las diferencias detectadas.'],encargado:['ROL RELACIONADO','El encargado de sucursal interviene en la revisión y aprobación del cierre.']};
+root.querySelectorAll('[data-k]').forEach(btn=>btn.addEventListener('click',()=>{root.querySelectorAll('[data-k]').forEach(x=>x.setAttribute('aria-pressed',String(x===btn)));const d=details[btn.dataset.k];root.querySelector('#k-detail-type').textContent=d[0];root.querySelector('#k-detail').textContent=d[1]}));
+const answers={dif:'Ejemplo de respuesta de Tyto: consultá la política de diferencias de caja y seguí el procedimiento de registro y aprobación.',resp:'Ejemplo de respuesta de Tyto: revisá el rol Encargado de sucursal y el circuito de aprobaciones del proceso.'};
+root.querySelectorAll('[data-q]').forEach(btn=>btn.addEventListener('click',()=>{root.querySelector('#k-answer').textContent=answers[btn.dataset.q]}));
+})();
+</script>
+</section>
+<section class="sec" style="background:#fff"><div style="max-width:1100px;margin:auto;padding:70px 24px"><h2 style="font-size:clamp(28px,4vw,42px);font-weight:500;margin:0">De lo que sabe tu gente a documentación que sirve.</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px"><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Documentamos lo que tu empresa sabe</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Entrevistamos a quienes conocen cada proceso, tomamos capturas y grabaciones, y la IA lo convierte en procedimientos ordenados. Nadie tiene que sentarse a escribir manuales.</p></article><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Lo mantenemos ordenado y validado</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Cada documento tiene responsable, versión vigente e historial. Lo que la IA genera no es oficial hasta que alguien de tu empresa lo aprueba.</p></article><article style="padding:24px;background:#F5F8F5;border:1px solid #DFEAE1;border-radius:10px"><h3 style="font-size:19px;margin:0 0 10px">Lo hacemos fácil de consultar</h3><p style="font-size:15px;line-height:1.6;color:#52695A;margin:0">Tu equipo encuentra el procedimiento o le pregunta a Tyto, que responde con tu documentación aprobada y te muestra de dónde salió.</p></article></div><p style="font-size:15px;line-height:1.6;color:#3D4F44;margin-top:28px;max-width:720px">Arrayán sirve para que un empleado nuevo arranque sin depender de que alguien le explique todo, para que las sucursales trabajen igual, y para llegar a una auditoría con la documentación vigente a mano.</p><p style="font-size:13px;color:#6C7C70;margin-top:16px">La pantalla anterior es una demostración con un proceso de ejemplo.</p></div></section>
+<section class="sec" id="sistemas" style="background: #EEF7F1">
 <div class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
 <div data-reveal="" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
 <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.015em; text-transform: uppercase; color: #5C6B62">Otras soluciones listas para tu empresa</span>
-<h2 class="h2" style="margin: 0; max-width: 700px; font-weight: 500; font-size: 48px; line-height: 1; letter-spacing: -0.02em">Sistemas que ya están funcionando y que podemos adaptar a tu negocio.</h2>
+<h2 class="h2" style="margin: 0; max-width: 700px; font-weight: 500; font-size: 48px; line-height: 1; letter-spacing: -0.02em">Sistemas que ya funcionan y que adaptamos a tu negocio.</h2>
+<p style="margin:0;max-width:620px;font-size:18px;line-height:1.5;color:#5C6B62">Los construimos para empresas con un problema concreto. Si el tuyo se parece, no hace falta empezar de cero.</p>
 </div>
 <div class="g3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
 <article class="card sol" data-d="3" data-reveal="" style="border-radius: 9px; background: #F6F8F5; border: 1px solid rgba(14,26,20,0.08); overflow: hidden; display: flex; flex-direction: column">
@@ -176,6 +313,7 @@ html{scroll-behavior:smooth}
 <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #4FA377; letter-spacing: 0.015em">COMERCIAL</span>
 <div class="sol-head" style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><h3 style="margin: 0; font-weight: 500; font-size: 24px; line-height: 1.04">Gestión de oportunidades comerciales</h3><svg aria-hidden="true" class="sol-chev" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="display: none; flex: none" viewbox="0 0 24 24" width="18"><path d="M6 9l6 6 6-6"></path></svg></div>
+<p class="sol-desc" style="margin: 0; font-size: 15px; line-height: 1.5; color: #5C6B62">Seguimiento de prospectos y oportunidades de punta a punta: quién las lleva, en qué etapa están y qué falta para cerrarlas.</p>
 </div>
 </article>
 <article class="card sol" data-d="4" data-reveal="" style="border-radius: 9px; background: #F6F8F5; border: 1px solid rgba(14,26,20,0.08); overflow: hidden; display: flex; flex-direction: column">
@@ -189,6 +327,7 @@ html{scroll-behavior:smooth}
 <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #4FA377; letter-spacing: 0.015em">ADMINISTRACIÓN</span>
 <div class="sol-head" style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><h3 style="margin: 0; font-weight: 500; font-size: 24px; line-height: 1.04">Órdenes de compra y pago</h3><svg aria-hidden="true" class="sol-chev" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="display: none; flex: none" viewbox="0 0 24 24" width="18"><path d="M6 9l6 6 6-6"></path></svg></div>
+<p class="sol-desc" style="margin: 0; font-size: 15px; line-height: 1.5; color: #5C6B62">Pedidos, aprobaciones y pagos en un solo flujo, con cada orden trazable desde que se pide hasta que se paga.</p>
 </div>
 </article>
 <article class="card sol" data-d="5" data-reveal="" style="border-radius: 9px; background: #F6F8F5; border: 1px solid rgba(14,26,20,0.08); overflow: hidden; display: flex; flex-direction: column">
@@ -198,11 +337,12 @@ html{scroll-behavior:smooth}
 <span style="height: 10px; width: 65%; border-radius: 3px; background: rgba(14,26,20,0.10)"></span>
 <span style="height: 10px; width: 72%; border-radius: 3px; background: #7CC39C"></span>
 <span style="height: 10px; width: 50%; border-radius: 3px; background: rgba(14,26,20,0.10)"></span>
-<span style="margin-top: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5C6B62">[CAPTURA REAL]</span>
+<span style="margin-top: auto; display: inline-flex; align-self: flex-start; padding: 5px 10px; border-radius: 6px; background: #7CC39C; font-size: 12px; font-weight: 500">En producción</span>
 </div>
 <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #4FA377; letter-spacing: 0.015em">OPERACIÓN</span>
 <div class="sol-head" style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><h3 style="margin: 0; font-weight: 500; font-size: 24px; line-height: 1.04">Gestión de pedidos y producción</h3><svg aria-hidden="true" class="sol-chev" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="display: none; flex: none" viewbox="0 0 24 24" width="18"><path d="M6 9l6 6 6-6"></path></svg></div>
+<p class="sol-desc" style="margin: 0; font-size: 15px; line-height: 1.5; color: #5C6B62">Los pedidos del día, qué está en producción y qué falta entregar, visible para toda la operación.</p>
 </div>
 </article>
 
@@ -254,16 +394,7 @@ Escribinos por WhatsApp
     if (!root) return;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     root.classList.add('js');
-    // preloader counter
-    var t0 = performance.now(), dur = reduce ? 0 : 1100;
-    var tick = function (now) {
-      var p = Math.min(1, (now - t0) / dur);
-      var e = 1 - Math.pow(1 - p, 3);
-      var c = Math.round(e * 100);
-      var ce=document.getElementById('cnt'); if (ce) ce.textContent=c;
-      if (p < 1) requestAnimationFrame(tick); else setTimeout(function(){ root.classList.add('done'); }, 150);
-    };
-    if (dur === 0) root.classList.add('done'); else requestAnimationFrame(tick);
+    if (reduce) root.classList.add('done'); else requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('done'); }); });
     // scroll reveal
     var els = root.querySelectorAll('[data-reveal]');
     if ('IntersectionObserver' in window) {
