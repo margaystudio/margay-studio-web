@@ -15,10 +15,6 @@ a{color:#0E1A14;text-decoration:none}a:hover{color:#2F6B4A}
 .mq-track{animation:mq-slide 28s linear infinite;will-change:transform;transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 @media (prefers-reduced-motion: reduce){.mq-track{animation-duration:60s}}
 html{scroll-behavior:smooth}
-/* preloader */
-.pre{position:fixed;inset:0;z-index:50;background:#0E1A14;color:#EEF7F1;display:flex;align-items:flex-end;justify-content:space-between;padding:32px 40px;box-sizing:border-box;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.015em;transition:transform .9s cubic-bezier(.76,0,.24,1)}
-.pre .n{font-family:'Inter',sans-serif;font-weight:500;font-size:96px;line-height:.9;letter-spacing:-.03em}
-.done .pre{transform:translateY(-100%)}
 /* hero load */
 .hl .w{display:inline-block;transform:translateY(110%);transition:transform 1s cubic-bezier(.19,1,.22,1)}
 .hl{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em;margin-bottom:-.06em}
@@ -51,7 +47,7 @@ html{scroll-behavior:smooth}
 .core{animation:breathe 3s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(124,195,156,.0)}50%{box-shadow:0 0 0 14px rgba(124,195,156,.16)}}
 @media (prefers-reduced-motion: reduce){
-.pre{display:none}.hl .w,.fu,.shot,.bar,.js [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+.hl .w,.fu,.shot,.bar,.js [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 .flow .dot,.core,.card,.btn{animation:none!important;transition:none!important}}
 
 .net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
@@ -67,7 +63,6 @@ html{scroll-behavior:smooth}
   .h1{font-size:60px!important}
 }
 @media (max-width: 760px){
-  .pre{padding:20px}.pre .n{font-size:64px}
   header nav[aria-label="Principal"]{display:none!important}
   header a.btn[href^="mailto"]{display:none!important}
   header > div{height:60px!important;padding:0 16px!important}
@@ -138,7 +133,6 @@ html{scroll-behavior:smooth}
 </head>
 <body>
 <div id="page" style="width: 100%; font-family: 'Inter', system-ui, sans-serif; color: #0E1A14; background: #FFFFFF; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased">
-<div aria-hidden="true" class="pre"><span>MARGAY STUDIO</span><span class="n"><span id="cnt">0</span></span><span>CARGANDO</span></div>
 <canvas aria-hidden="true" class="net-fixed" id="net-page"></canvas>
 <!-- NAV -->
 <header class="sec" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(14,26,20,0.10)">
@@ -312,16 +306,8 @@ Escribinos por WhatsApp
     if (!root) return;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     root.classList.add('js');
-    // preloader counter
-    var t0 = performance.now(), dur = reduce ? 0 : 1100;
-    var tick = function (now) {
-      var p = Math.min(1, (now - t0) / dur);
-      var e = 1 - Math.pow(1 - p, 3);
-      var c = Math.round(e * 100);
-      var ce=document.getElementById('cnt'); if (ce) ce.textContent=c;
-      if (p < 1) requestAnimationFrame(tick); else setTimeout(function(){ root.classList.add('done'); }, 150);
-    };
-    if (dur === 0) root.classList.add('done'); else requestAnimationFrame(tick);
+    // hero entrance: next frame, so the transitions actually run
+    if (reduce) root.classList.add('done'); else requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('done'); }); });
     // scroll reveal
     var els = root.querySelectorAll('[data-reveal]');
     if ('IntersectionObserver' in window) {
