@@ -220,25 +220,7 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 <section class="sec" id="arrayan" style="background:#fff">
 <style>
 .k-layout{max-width:1200px;margin:auto;padding:36px 24px 48px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
-.k-label{font:500 12px 'JetBrains Mono',monospace;color:#568267;letter-spacing:.02em}
-.k-stage{position:relative;min-height:250px;border-radius:12px;border:1px solid #D8E7DD;background:radial-gradient(circle at 50% 48%,#E3F3E9,#fff 68%);overflow:hidden}
-.k-stage svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.k-stage path{stroke:#A3CDB1;stroke-width:1.7;fill:none;stroke-dasharray:5 7;animation:k-dash 15s linear infinite}
-@keyframes k-dash{to{stroke-dashoffset:-240}}
-.k-node{position:absolute;transform:translate(-50%,-50%);border:1px solid #C8DDCF;border-radius:9px;background:#fff;padding:8px 10px;box-shadow:0 8px 24px #123b2310;text-align:left;cursor:pointer;color:#0E1A14;min-width:108px;max-width:150px;transition:background .2s,border-color .2s,box-shadow .2s}
-.k-node:hover,.k-node[aria-pressed="true"]{border-color:#4FA377;background:#E5F5EB;box-shadow:0 9px 26px #123b2324}
-.k-node small{display:block;font:500 10px 'JetBrains Mono',monospace;color:#568267;margin-bottom:5px}
-.k-node span{font-size:12px;font-weight:500;line-height:1.2;display:block}
-.k-center{left:50%;top:49%;background:#D8F0E1;border:2px solid #7CC39C;min-width:145px;text-align:center;cursor:default}
-.k-center span{font-size:15px}
-.k-n1{left:21%;top:19%}.k-n2{left:79%;top:19%}.k-n3{left:19%;top:78%}.k-n4{left:80%;top:78%}
-.k-info{padding:10px 14px;background:#fff;border:1px solid #D8E7DD;border-radius:9px;min-height:57px;margin-top:8px;box-sizing:border-box}
-.k-tyto{margin-top:8px;border-radius:9px;padding:11px 14px;background:#E7F3EA;border:1px solid #D1E8D8}
-.k-tyto button{border:0;background:#fff;color:#27573C;padding:8px 10px;border-radius:6px;cursor:pointer;font-size:12px;text-align:left}
-.k-tyto button:hover{background:#D6EADD}
-@media(max-width:850px){.k-layout{grid-template-columns:1fr;gap:32px}.k-stage{min-height:260px}}
-@media(max-width:460px){.k-stage{min-height:260px}.k-node{min-width:85px;max-width:115px;padding:9px}.k-node span{font-size:11px}.k-center{min-width:125px}.k-center span{font-size:14px}}
-@media(prefers-reduced-motion:reduce){.k-stage path{animation:none}}
+@media(max-width:900px){.k-layout{grid-template-columns:1fr;gap:26px}}
 </style>
 <div class="mod-head" data-reveal="" style="max-width:1200px;margin:auto;padding:80px 24px 0;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
 <div style="display:flex;align-items:center;gap:12px"><span style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;background:rgba(74,92,184,.12);flex:none"><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><g fill="none" stroke="#4A5CB8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11.5" cy="13" r="5"/><circle cx="11.5" cy="35" r="5"/><circle cx="36.5" cy="24" r="5"/><path d="M16.2 15.3 31.9 21.6"/><path d="M16.2 32.7 31.9 26.4"/></g></svg></span><span style="font:500 12px 'JetBrains Mono',monospace;letter-spacing:.02em;color:#4A5CB8">PLATAFORMA DE CONOCIMIENTO</span></div>
@@ -250,28 +232,12 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.45;color:#3D4F44;max-width:520px"><li style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#4A5CB8;margin-top:9px"></span><span>Relevamos nosotros: nadie tiene que sentarse a escribir manuales.</span></li><li style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#4A5CB8;margin-top:9px"></span><span>Cada documento con responsable, versión vigente e historial.</span></li><li style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#4A5CB8;margin-top:9px"></span><span>Tyto, el asistente de IA, responde con tu documentación aprobada.</span></li></ul>
 <p style="margin:4px 0 0;font-size:13px;color:#6F7C75">Sirve para que un empleado nuevo arranque solo, para que las sucursales trabajen igual y para llegar a una auditoría con todo a mano.</p>
 </div>
-<div data-reveal="" data-d="2">
-<div class="k-stage" aria-label="Explorá las relaciones de un proceso de cierre de caja">
-<svg viewBox="0 0 500 390" preserveAspectRatio="none" aria-hidden="true"><path d="M250 191 L105 74 M250 191 L395 74 M250 191 L95 304 M250 191 L400 304"/></svg>
-<div class="k-node k-center"><small>PROCESO</small><span>Cierre de caja diario</span></div>
-<button class="k-node k-n1" type="button" data-k="instructivo" aria-pressed="true"><small>PROCEDIMIENTO</small><span>Instructivo de cierre</span></button>
-<button class="k-node k-n2" type="button" data-k="arqueo" aria-pressed="false"><small>DOCUMENTO</small><span>Planilla de arqueo</span></button>
-<button class="k-node k-n3" type="button" data-k="diferencias" aria-pressed="false"><small>POLÍTICA</small><span>Diferencias de caja</span></button>
-<button class="k-node k-n4" type="button" data-k="encargado" aria-pressed="false"><small>ROL</small><span>Encargado de sucursal</span></button>
+<div class="ui-comp" data-reveal="" data-d="2" aria-label="Fragmentos reales de la interfaz de Arrayán" style="position:relative;min-height:300px">
+<img class="ui-frag" src="assets/screens/arrayan-tipos.png" alt="Lista de tipos de documento en Arrayán: procedimiento, instructivo, manual interno, manual externo, manual, política" loading="lazy" width="262" height="364" style="position:absolute;left:0;top:0;width:30%;height:auto;border-radius:10px;box-shadow:0 14px 40px rgba(14,26,20,.12);border:1px solid rgba(14,26,20,.08);background:#fff">
+<img class="ui-frag" src="assets/screens/arrayan-comportamiento.png" alt="Configuración de un tipo de documento: versionado, aprobación, disponible para Tyto, relaciones y extracción de metadatos" loading="lazy" width="718" height="278" style="position:absolute;right:0;top:22px;width:70%;height:auto;border-radius:10px;box-shadow:0 18px 50px rgba(14,26,20,.14);border:1px solid rgba(14,26,20,.08);background:#fff">
+<img class="ui-frag" src="assets/screens/arrayan-aviso.png" alt="Aviso de Arrayán: importado no significa aprobado; Tyto no usa los documentos hasta que sean aprobados por otro usuario autorizado" loading="lazy" width="854" height="102" style="position:absolute;left:10%;top:208px;width:86%;height:auto;border-radius:10px;box-shadow:0 22px 60px rgba(14,26,20,.18);border:1px solid rgba(14,26,20,.08)">
+<span style="position:absolute;left:0;bottom:0;font-size:11px;color:#6F7C75">Pantallas reales · datos de demostración</span>
 </div>
-<div class="k-info" aria-live="polite"><div class="k-label" id="k-detail-type">PROCEDIMIENTO RELACIONADO</div><div id="k-detail" style="font-size:13px;line-height:1.35;margin-top:4px">El instructivo reúne los pasos para realizar el cierre de caja diario.</div></div>
-<div class="k-tyto"><div style="font-size:14px;font-weight:500;margin-bottom:6px">Preguntale a Tyto <span style="font-weight:400;color:#5C6B62">· asistente de IA</span></div><div style="display:flex;flex-wrap:wrap;gap:7px"><button type="button" data-q="dif">¿Qué hago si hay una diferencia?</button><button type="button" data-q="resp">¿Quién aprueba el cierre?</button></div><div id="k-answer" aria-live="polite" style="font-size:12px;line-height:1.4;margin-top:6px;color:#315D43">Tyto te ayuda a encontrar respuestas a partir del conocimiento documentado.</div></div>
-</div>
-</div>
-<script>
-(function(){
-const root=document.getElementById('arrayan-demo');if(!root)return;
-const details={instructivo:['PROCEDIMIENTO RELACIONADO','El instructivo reúne los pasos para realizar el cierre de caja diario.'],arqueo:['DOCUMENTO RELACIONADO','La planilla de arqueo permite registrar y contrastar los importes del cierre.'],diferencias:['POLÍTICA RELACIONADA','La política indica cómo registrar, revisar y escalar las diferencias detectadas.'],encargado:['ROL RELACIONADO','El encargado de sucursal interviene en la revisión y aprobación del cierre.']};
-root.querySelectorAll('[data-k]').forEach(btn=>btn.addEventListener('click',()=>{root.querySelectorAll('[data-k]').forEach(x=>x.setAttribute('aria-pressed',String(x===btn)));const d=details[btn.dataset.k];root.querySelector('#k-detail-type').textContent=d[0];root.querySelector('#k-detail').textContent=d[1]}));
-const answers={dif:'Ejemplo de respuesta de Tyto: consultá la política de diferencias de caja y seguí el procedimiento de registro y aprobación.',resp:'Ejemplo de respuesta de Tyto: revisá el rol Encargado de sucursal y el circuito de aprobaciones del proceso.'};
-root.querySelectorAll('[data-q]').forEach(btn=>btn.addEventListener('click',()=>{root.querySelector('#k-answer').textContent=answers[btn.dataset.q]}));
-})();
-</script>
 <div class="flow-strip" data-reveal="" style="--acc:#4A5CB8;--tint:rgba(74,92,184,.10);max-width:1200px;margin:auto;padding:0 24px 72px;box-sizing:border-box">
 <div class="fs-label">CÓMO FUNCIONA · DE LO QUE SABE TU GENTE A DOCUMENTACIÓN VALIDADA</div>
 <div class="fs-row">
