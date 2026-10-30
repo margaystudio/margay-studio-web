@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+<meta name="google-site-verification" content="0vFZj8nfzUEtRjjWR2kuX_NbeEoUnrh8DDg95MjU9Qs"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de privacidad | Margay Studio</title>
   <meta name="description" content="Cómo Margay Studio trata los datos personales, incluidos los mensajes de WhatsApp que procesa por cuenta de empresas clientes, y cómo ejercer tus derechos según la Ley 18.331." />
@@ -12,14 +13,6 @@
   <meta property="og:url" content="https://margaystudio.io/privacidad" />
   <meta property="og:site_name" content="Margay Studio" />
   <meta property="og:locale" content="es_UY" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY39W25F30"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WY39W25F30');
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -145,7 +138,7 @@
       <article class="legal">
         <span class="tag">Privacidad</span>
         <h1>Política de privacidad</h1>
-        <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+        <p class="updated">Última actualización: 27 de octubre de 2026</p>
         <p class="intro">Esta política explica, en lenguaje simple, qué datos personales tratamos, para qué, con quién los compartimos y cómo podés ejercer tus derechos, conforme a la Ley N.º 18.331 de Protección de Datos Personales de Uruguay.</p>
 
         <section id="responsable">
@@ -200,7 +193,8 @@
 
         <section id="este-sitio">
           <h2>Este sitio web</h2>
-          <p>Usamos Google Analytics para medir de forma agregada cómo se usa este sitio; para eso guarda cookies en tu navegador, que podés bloquear o borrar desde su configuración.</p>
+          <p>Usamos Google Analytics, cargado a través de Google Tag Manager, para medir de forma agregada cómo se usa este sitio; para eso guarda cookies en tu navegador. Solo se activa si lo aceptás en el aviso de cookies, y podés cambiar tu elección cuando quieras desde <a href="#" data-cookie-prefs>Preferencias de cookies</a>. También podés bloquearlas o borrarlas desde la configuración de tu navegador.</p>
+          <p style="margin-top:12px;">Tenemos activadas las señales de Google (Google signals): si iniciaste sesión en tu cuenta de Google y aceptaste la personalización de anuncios, Google puede asociar tu visita con datos agregados y anónimos de edad, género e intereses. Nunca recibimos datos que te identifiquen. Podés gestionar o desactivar esto en <a href="https://myadcenter.google.com/" target="_blank" rel="noopener">Mi Centro de Anuncios de Google</a> y revisar tu actividad en <a href="https://myactivity.google.com/" target="_blank" rel="noopener">Mi Actividad</a>.</p>
         </section>
 
         <section id="cambios">
@@ -223,10 +217,86 @@
           <li><a href="/">Inicio</a></li>
           <li><a href="mailto:contacto@margaystudio.io">Contacto</a></li>
           <li><a href="/privacidad">Privacidad</a></li>
+          <li><a href="#" data-cookie-prefs>Cookies</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
+<!-- Aviso de cookies + Google Analytics con consentimiento -->
+<style>
+.ck{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);opacity:0;z-index:9999;width:min(720px,calc(100% - 32px));box-sizing:border-box;background:#fff;color:#0E1A14;border:1px solid #E3E8E5;border-radius:14px;box-shadow:0 12px 40px rgba(14,26,20,.12);padding:14px 14px 14px 22px;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14px;line-height:1.45;transition:opacity .35s ease,transform .35s ease}
+.ck.on{opacity:1;transform:translate(-50%,0)}
+.ck[hidden],.ck-prefs[hidden]{display:none!important}
+.ck-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ck-txt{flex:1 1 220px;margin:0;color:#3D4A43}
+.ck-txt a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.ck-acts{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ck-link{background:none;border:0;padding:4px 2px;font:inherit;font-weight:500;color:#0E1A14;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.ck-btn{height:40px;padding:0 20px;border-radius:8px;font:inherit;font-weight:500;cursor:pointer;transition:background .2s ease,border-color .2s ease}
+.ck-no{background:#fff;color:#0E1A14;border:1px solid #D5DCD8}.ck-no:hover{border-color:#0E1A14}
+.ck-yes{background:#0E1A14;color:#fff;border:1px solid #0E1A14}.ck-yes:hover{background:#2F6B4A;border-color:#2F6B4A}
+.ck-btn:focus-visible,.ck-link:focus-visible{outline:2px solid #4FA377;outline-offset:2px}
+.ck-prefs{border-top:1px solid #EDF1EE;margin-top:14px;padding-top:12px;display:grid;gap:10px}
+.ck-opt{display:flex;align-items:flex-start;gap:12px;justify-content:space-between}
+.ck-opt b{font-weight:600;color:#0E1A14}.ck-opt span{display:block;color:#5C6B62;font-size:13px}
+.ck-sw{appearance:none;-webkit-appearance:none;flex:none;width:38px;height:22px;border-radius:22px;background:#D5DCD8;position:relative;cursor:pointer;margin:2px 0 0;transition:background .2s}
+.ck-sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s}
+.ck-sw:checked{background:#2F6B4A}.ck-sw:checked::after{transform:translateX(16px)}
+.ck-sw:disabled{opacity:.55;cursor:default}
+.ck-save{justify-self:end}
+@media(max-width:560px){.ck{padding:14px 16px}.ck-acts{width:100%}.ck-btn{flex:1}.ck-link{margin-right:auto}}
+@media(prefers-reduced-motion:reduce){.ck{transition:none}}
+</style>
+<div class="ck" id="ck" role="region" aria-label="Aviso de cookies" hidden>
+  <div class="ck-row">
+    <p class="ck-txt">Usamos cookies para entender cómo se usa el sitio y mejorarlo. <a href="/privacidad">Más info</a></p>
+    <div class="ck-acts">
+      <button type="button" class="ck-link" id="ck-pref" aria-expanded="false" aria-controls="ck-prefs">Preferencias</button>
+      <button type="button" class="ck-link" id="ck-no">Rechazar</button>
+      <button type="button" class="ck-btn ck-yes" id="ck-yes">Aceptar</button>
+    </div>
+  </div>
+  <div class="ck-prefs" id="ck-prefs" hidden>
+    <label class="ck-opt"><div><b>Necesarias</b><span>Guardan tu elección sobre cookies. Siempre activas.</span></div><input class="ck-sw" type="checkbox" checked disabled aria-label="Cookies necesarias"></label>
+    <label class="ck-opt"><div><b>Analítica</b><span>Google Analytics, para medir visitas de forma agregada.</span></div><input class="ck-sw" type="checkbox" id="ck-an" checked aria-label="Cookies de analítica"></label>
+    <button type="button" class="ck-btn ck-no ck-save" id="ck-save">Guardar preferencias</button>
+  </div>
+</div>
+<script>
+(function(){
+  var GTM='GTM-5XJCC9X8', KEY='margay-cookies', loaded=false;
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function put(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments)} window.gtag=window.gtag||gtag;
+  gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  function loadGA(){
+    gtag('consent','update',{analytics_storage:'granted'});
+    if(loaded)return; loaded=true;
+    // Google Tag Manager: GA4 (G-WY39W25F30) y los eventos se configuran en el contenedor
+    dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id='+GTM;document.head.appendChild(s);
+  }
+  function clearGA(){
+    gtag('consent','update',{analytics_storage:'denied'});
+    document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();
+      if(/^_ga/.test(n)){var h=location.hostname.split('.');
+        for(var i=0;i<h.length;i++){var d=h.slice(i).join('.');document.cookie=n+'=;Max-Age=0;path=/;domain=.'+d;}
+        document.cookie=n+'=;Max-Age=0;path=/';}});
+  }
+  var box=document.getElementById('ck'),pr=document.getElementById('ck-prefs'),pb=document.getElementById('ck-pref'),an=document.getElementById('ck-an');
+  function show(){an.checked=get()!=='denied';box.hidden=false;requestAnimationFrame(function(){requestAnimationFrame(function(){box.classList.add('on')})})}
+  function hide(){box.classList.remove('on');setTimeout(function(){box.hidden=true;pr.hidden=true;pb.setAttribute('aria-expanded','false')},350)}
+  function decide(ok){var was=get();put(ok?'accepted':'denied');if(ok)loadGA();else{clearGA();if(was==='accepted'&&loaded)location.reload();}hide()}
+  document.getElementById('ck-yes').onclick=function(){decide(true)};
+  document.getElementById('ck-no').onclick=function(){decide(false)};
+  document.getElementById('ck-save').onclick=function(){decide(an.checked)};
+  pb.onclick=function(){pr.hidden=!pr.hidden;pb.setAttribute('aria-expanded',String(!pr.hidden))};
+  window.margayCookies={open:show};
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cookie-prefs]');if(a){e.preventDefault();show();}});
+  var c=get(); if(c==='accepted')loadGA(); else if(c!=='denied')setTimeout(show,1200);
+})();
+</script>
 </body>
 </html>
