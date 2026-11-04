@@ -18,6 +18,7 @@
 - Distinguir funcionalidades reales de propuestas o prototipos.
 - Usar logos y referencias nominadas solo con autorización (GPU, PyP y Servicial según la planificación).
 - No publicar nombres ni logos de Santander, Rivera o Colonia sin aprobación.
+  - 2026-11-04: Luis aprobó el logo de Colonia (encuentro mágico) en el carrusel.
 - Validar textos y casos antes de pasar a `main`.
 
 ## Próximos pasos
